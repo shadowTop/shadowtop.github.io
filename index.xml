@@ -64,7 +64,8 @@
 
 &lt;ul&gt;
 &lt;li&gt;访问&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo&lt;/a&gt;官网，点击 Quick Start 按钮快速开始&lt;/li&gt;
-&lt;li&gt;根据官网文档操作，会创建一个 public 目录，这个目录就是博客站点，可以使用 hugo server 进行网站预览
+&lt;li&gt;在官方文档依次进行 STep2-Step7 的操作，完成了从站点创建、主题配置、新建博客、开启 Hugo server 等步骤，此时打开&lt;a href=&#34;http://localhost:1313/&#34;&gt;本地页面&lt;/a&gt;就可以看到你的博客预览&lt;/li&gt;
+&lt;li&gt;运行 hugo -D ，会创建一个 public 目录，这个目录就是博客站点，可以使用 hugo server 进行网站预览
 &lt;img src=&#34;http://localhost:1313/1.png&#34; alt=&#34;操作&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
