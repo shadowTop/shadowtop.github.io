@@ -65,7 +65,7 @@
 &lt;ul&gt;
 &lt;li&gt;访问&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo&lt;/a&gt;官网，点击 Quick Start 按钮快速开始&lt;/li&gt;
 &lt;li&gt;根据官网文档操作，会创建一个 public 目录，这个目录就是博客站点，可以使用 hugo server 进行网站预览
-&lt;img src=&#34;./../../public/images/1.png&#34; alt=&#34;操作&#34; /&gt;&lt;/li&gt;
+&lt;img src=&#34;http://localhost:1313/1.png&#34; alt=&#34;操作&#34; /&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
