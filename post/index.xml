@@ -6,7 +6,7 @@
     <description>Recent content in Posts on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Apr 2020 09:48:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 13:11:41 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>http://localhost:1313/post/jane-theme-preview/</guid>
       <description>主题预览,内容有待填充。</description>
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>http://localhost:1313/post/html/</link>
+      <pubDate>Fri, 10 Apr 2020 13:11:41 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html/</guid>
+      <description>HTML 入门笔记 HTML 的历史及简介 HTML 是超文本标记语言，用于描述、定义网站内容。 HTML 在 1990 左右诞生，发明人是 Tim Berners-Lee(李爵士) 如何书写 HTML - 起</description>
     </item>
     
     <item>

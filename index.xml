@@ -6,7 +6,7 @@
     <description>Recent content on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Apr 2020 09:48:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Apr 2020 13:11:41 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,80 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Html</title>
+      <link>http://localhost:1313/post/html/</link>
+      <pubDate>Fri, 10 Apr 2020 13:11:41 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html/</guid>
+      
+        <description>
+
+&lt;h1 id=&#34;html-入门笔记&#34;&gt;HTML 入门笔记&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;HTML 的历史及简介
+HTML 是超文本标记语言，用于描述、定义网站内容。
+HTML 在 1990 左右诞生，发明人是 Tim Berners-Lee(李爵士)&lt;/li&gt;
+&lt;li&gt;如何书写 HTML - 起手式
+在使用 VScode 进行编写 html 文件时，先写一个!再敲 tab 键，编辑器可以自动生成 html 的基本框架 - 这些标签中分别规定了文档类型、语言、标题以及设备兼容&lt;/li&gt;
+&lt;li&gt;HTML 中常用来表示章节的标签
+
+&lt;ul&gt;
+&lt;li&gt;&lt;h1&gt;–&lt;h6&gt; 标题(Heading)元素呈现了六个不同的级别的标题，&lt;h1&gt; 级别最高，而 &lt;h6&gt; 级别最低。&lt;/li&gt;
+&lt;li&gt;&lt;section&gt;元素表示一个包含在HTML文档中的独立部分，它没有更具体的语义元素来表示，一般来说会有包含一个标题。&lt;/li&gt;
+&lt;li&gt;&lt;article&gt;元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。​​&lt;/li&gt;
+&lt;li&gt;&lt;main&gt; 元素呈现了文档的 &lt;body&gt; 或应用的主体部分。主体部分由与文档直接相关，或者扩展于文档的中心主题、应用的主要功能部分的内容组成。&lt;/li&gt;
+&lt;li&gt;&lt;aside&gt; 元素表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTML 中的全局属性&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;全局属性是所有 HTML 元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;class
+一个以空格分隔的元素的类名（classes ）列表，它允许 CSS 和 Javascript 通过类选择器 (class selectors) 或 DOM 方法( document.getElementsByClassName)来选择和访问特定的元素。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;id
+定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。 其目的是在链接（使用片段标识符），脚本或样式（使用 CSS）时标识元素。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;contenteditable
+一个枚举属性（enumerated attribute），表示元素是否可被用户编辑。 如果可以，浏览器会调整元素的部件（widget）以允许编辑。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;hidden
+布尔属性表示该元素尚未或不再相关。例如，它可用于隐藏在登录过程完成之前无法使用的页面元素。浏览器不会呈现此类元素。不得使用此属性隐藏可合法显示的内容&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;style
+含要应用于元素的 CSS 样式声明。 请注意，建议在单独的文件中定义样式。 该属性和&lt;style&gt;元素主要用于快速样式化，例如用于测试目的。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;tabindex
+整数属性，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航，如果是，则表示哪个位置。它可能需要几个值：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;负值表示该元素应该是可聚焦的，但不应通过顺序键盘导航到达;&lt;/li&gt;
+&lt;li&gt;0 表示元素应通过顺序键盘导航可聚焦和可到达，但其相对顺序由平台约定定义;&lt;/li&gt;
+&lt;li&gt;正值意味着元素应该可以通过顺序键盘导航进行聚焦和访问;元素聚焦的顺序是 tabindex 的增加值。如果多个元素共享相同的 tabindex，则它们的相对顺序遵循它们在文档中的相对位置。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;title
+包含表示与其所属元素相关信息的文本。 这些信息通常可以作为提示呈现给用户,但不是必须的。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;常见的内容标签&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a&gt; 元素（或称锚元素）可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。&lt;/li&gt;
+&lt;li&gt;Strong 元素 (&lt;strong&gt;)表示文本十分重要，一般用粗体显示。&lt;/li&gt;
+&lt;li&gt;HTML 着重元素 (&lt;em&gt;) 标记出需要用户着重阅读的内容， &lt;em&gt; 元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。&lt;/li&gt;
+&lt;li&gt;HTML &lt;code&gt; 元素呈现一段计算机代码. 默认情况下, 它以浏览器的默认等宽字体显示.&lt;/li&gt;
+&lt;li&gt;HTML &lt;code&gt; 元素呈现一段计算机代码. 默认情况下, 它以浏览器 git 的默认等宽字体显示.&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>
