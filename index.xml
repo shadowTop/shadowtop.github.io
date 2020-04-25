@@ -84,7 +84,13 @@
 
 &lt;ol&gt;
 &lt;li&gt;域名可以说是一个 IP 地址的代称，目的是为了便于记忆后者。是互联网上某个计算机或组的一种身份标识，用于在传输数据时的电子方位标识，服务器主机就是用于服务于互联网的 PC 的计算机服务设备。&lt;/li&gt;
-&lt;li&gt;域名分为顶级域名（国家及地区双字代码顶级域（国家和地区顶级域）和通用顶级域如 .com | .edu | .org | .net）、子域名（例如，在 zh.wikipedia.org 中，wikipedia 是二级域名。w3.org 中，w3 也是二级域名，与前例中的 wikipedia 属于一个层面。）、国际化域名 包括：： 。&lt;/li&gt;
+&lt;li&gt;域名分类
+
+&lt;ul&gt;
+&lt;li&gt;顶级域名（国家及地区双字代码顶级域（国家和地区顶级域）和通用顶级域如 .com | .edu | .org | .net）&lt;/li&gt;
+&lt;li&gt;子域名（例如，在 zh.wikipedia.org 中，wikipedia 是二级域名。w3.org 中，w3 也是二级域名，与前例中的 wikipedia 属于一个层面。）&lt;/li&gt;
+&lt;li&gt;国际化域名&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       
