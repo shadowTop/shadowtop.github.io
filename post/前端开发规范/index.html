@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>前端代码开发规范 - 影子的博客</title>
+  <title> - 影子的博客</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,19 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="xianmin" />
-  <meta name="description" content="前端代码规范 Front Standard Guide 前端 JS 项目开发规范 本文来自 B 站：老陈打码。 规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起" />
+  <meta name="description" content="前端代码规范 Front Standard Guide
+前端 JS 项目开发规范 本文来自 B 站：老陈打码。
+规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起是快乐的。
+引自《阿里规约》的开头片段：
+&amp;mdash;-现代软件架构的复杂性需要协同开发完成，如何高效地协同呢？无规矩不成方圆，无规范难以协同，比如，制订交通法规表面上是要限制行车权，实际上是保障公众的人身安全，试想如果没有限速，没有红绿灯，谁还敢上路行驶。对软件来说，适当的规范和标准绝不是消灭代码内容的创造性、优雅性，而是限制过度个性化，以一种普遍认可的统一方式一起做事，提升协作效率，降低沟通成本。代码的字里行间流淌的是软件系统的血液，质量的提升是尽可能少踩坑，杜绝踩重复的坑，切实提升系统稳定性，码出质量。
+一、编程规约 (一)命名规范 1.1.1 项目命名 全部采用小写方式， 以中划线分隔。
+正例：mall-management-system
+反例：mall_management-system / mallManagementSystem
+1.1.2 目录命名 全部采用小写方式， 以中划线分隔，有复数结构时，要采用复数命名法， 缩写不用复数
+正例： scripts / styles / components / images / utils / layouts / demo-styles / demo-scripts / img / doc
+反例： script / style / demo_scripts / demoStyles / imgs / docs
+【特殊】VUE 的项目中的 components 中的组件目录，使用 kebab-case 命名
+正例： head-search / page-loading / authorized / notice-icon" />
 
   <meta name="keywords" content="Hugo, theme, jane" />
 
@@ -59,26 +71,60 @@
 
 
 
-<meta property="og:title" content="前端代码开发规范" />
-<meta property="og:description" content="前端代码规范 Front Standard Guide 前端 JS 项目开发规范 本文来自 B 站：老陈打码。 规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起" />
+<meta property="og:title" content="" />
+<meta property="og:description" content="前端代码规范 Front Standard Guide
+前端 JS 项目开发规范 本文来自 B 站：老陈打码。
+规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起是快乐的。
+引自《阿里规约》的开头片段：
+&mdash;-现代软件架构的复杂性需要协同开发完成，如何高效地协同呢？无规矩不成方圆，无规范难以协同，比如，制订交通法规表面上是要限制行车权，实际上是保障公众的人身安全，试想如果没有限速，没有红绿灯，谁还敢上路行驶。对软件来说，适当的规范和标准绝不是消灭代码内容的创造性、优雅性，而是限制过度个性化，以一种普遍认可的统一方式一起做事，提升协作效率，降低沟通成本。代码的字里行间流淌的是软件系统的血液，质量的提升是尽可能少踩坑，杜绝踩重复的坑，切实提升系统稳定性，码出质量。
+一、编程规约 (一)命名规范 1.1.1 项目命名 全部采用小写方式， 以中划线分隔。
+正例：mall-management-system
+反例：mall_management-system / mallManagementSystem
+1.1.2 目录命名 全部采用小写方式， 以中划线分隔，有复数结构时，要采用复数命名法， 缩写不用复数
+正例： scripts / styles / components / images / utils / layouts / demo-styles / demo-scripts / img / doc
+反例： script / style / demo_scripts / demoStyles / imgs / docs
+【特殊】VUE 的项目中的 components 中的组件目录，使用 kebab-case 命名
+正例： head-search / page-loading / authorized / notice-icon" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://localhost:1313/post/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" />
-<meta property="article:published_time" content="2020-04-25T08:01:34+08:00" />
-<meta property="article:modified_time" content="2020-04-25T08:01:34+08:00" />
-<meta itemprop="name" content="前端代码开发规范">
-<meta itemprop="description" content="前端代码规范 Front Standard Guide 前端 JS 项目开发规范 本文来自 B 站：老陈打码。 规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起">
+
+<meta itemprop="name" content="">
+<meta itemprop="description" content="前端代码规范 Front Standard Guide
+前端 JS 项目开发规范 本文来自 B 站：老陈打码。
+规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起是快乐的。
+引自《阿里规约》的开头片段：
+&mdash;-现代软件架构的复杂性需要协同开发完成，如何高效地协同呢？无规矩不成方圆，无规范难以协同，比如，制订交通法规表面上是要限制行车权，实际上是保障公众的人身安全，试想如果没有限速，没有红绿灯，谁还敢上路行驶。对软件来说，适当的规范和标准绝不是消灭代码内容的创造性、优雅性，而是限制过度个性化，以一种普遍认可的统一方式一起做事，提升协作效率，降低沟通成本。代码的字里行间流淌的是软件系统的血液，质量的提升是尽可能少踩坑，杜绝踩重复的坑，切实提升系统稳定性，码出质量。
+一、编程规约 (一)命名规范 1.1.1 项目命名 全部采用小写方式， 以中划线分隔。
+正例：mall-management-system
+反例：mall_management-system / mallManagementSystem
+1.1.2 目录命名 全部采用小写方式， 以中划线分隔，有复数结构时，要采用复数命名法， 缩写不用复数
+正例： scripts / styles / components / images / utils / layouts / demo-styles / demo-scripts / img / doc
+反例： script / style / demo_scripts / demoStyles / imgs / docs
+【特殊】VUE 的项目中的 components 中的组件目录，使用 kebab-case 命名
+正例： head-search / page-loading / authorized / notice-icon">
 
 
-<meta itemprop="datePublished" content="2020-04-25T08:01:34&#43;08:00" />
-<meta itemprop="dateModified" content="2020-04-25T08:01:34&#43;08:00" />
-<meta itemprop="wordCount" content="6711">
+
+<meta itemprop="wordCount" content="1889">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="前端代码开发规范"/>
-<meta name="twitter:description" content="前端代码规范 Front Standard Guide 前端 JS 项目开发规范 本文来自 B 站：老陈打码。 规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起"/>
+<meta name="twitter:title" content=""/>
+<meta name="twitter:description" content="前端代码规范 Front Standard Guide
+前端 JS 项目开发规范 本文来自 B 站：老陈打码。
+规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起是快乐的。
+引自《阿里规约》的开头片段：
+&mdash;-现代软件架构的复杂性需要协同开发完成，如何高效地协同呢？无规矩不成方圆，无规范难以协同，比如，制订交通法规表面上是要限制行车权，实际上是保障公众的人身安全，试想如果没有限速，没有红绿灯，谁还敢上路行驶。对软件来说，适当的规范和标准绝不是消灭代码内容的创造性、优雅性，而是限制过度个性化，以一种普遍认可的统一方式一起做事，提升协作效率，降低沟通成本。代码的字里行间流淌的是软件系统的血液，质量的提升是尽可能少踩坑，杜绝踩重复的坑，切实提升系统稳定性，码出质量。
+一、编程规约 (一)命名规范 1.1.1 项目命名 全部采用小写方式， 以中划线分隔。
+正例：mall-management-system
+反例：mall_management-system / mallManagementSystem
+1.1.2 目录命名 全部采用小写方式， 以中划线分隔，有复数结构时，要采用复数命名法， 缩写不用复数
+正例： scripts / styles / components / images / utils / layouts / demo-styles / demo-scripts / img / doc
+反例： script / style / demo_scripts / demoStyles / imgs / docs
+【特殊】VUE 的项目中的 components 中的组件目录，使用 kebab-case 命名
+正例： head-search / page-loading / authorized / notice-icon"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -340,11 +386,11 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">前端代码开发规范</h1>
+      <h1 class="post-title"></h1>
       
       <div class="post-meta">
-        <time datetime="2020-04-25" class="post-time">
-          2020-04-25
+        <time datetime="0001-01-01" class="post-time">
+          0001-01-01
         </time>
         
         
@@ -1663,7 +1709,7 @@ store 按照业务进行拆分不同的 js 文件
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-      2020-04-25
+      0001-01-01
       
     </span>
   </p>
@@ -1684,20 +1730,20 @@ store 按照业务进行拆分不同的 js 文件
       
       <nav class="post-nav">
         
-        
-          <a class="next" href="/post/css/">
-            <span class="next-text nav-default">Css知识总结</span>
-            <span class="prev-text nav-mobile">下一篇</span>
+          <a class="prev" href="/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
             
             <i class="iconfont">
-              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   width="18" height="18">
-  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
 </svg>
 
             </i>
+            <span class="prev-text nav-default">如何使用Hugo搭建个人博客</span>
+            <span class="prev-text nav-mobile">上一篇</span>
           </a>
+        
       </nav>
     </footer>
   </article>
