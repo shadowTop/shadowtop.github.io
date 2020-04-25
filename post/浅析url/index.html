@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>影子的博客</title>
+  <title>浅析URL - 影子的博客</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="xianmin" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="URL 包含那几部分，每部分分别有什么作用 URL 包含 协议&#43; 域名或 IP&#43;端口号&#43;路径&#43; 查询字符串&#43;锚点 例子 http://www.baidu.com/s?wd=hi&amp;amp;rsv_spt=1#5 作用 协议为 HTTP 协议和 HTTPS 协议，规定访问和返回格式" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.57.2" />
 
 
-<link rel="canonical" href="http://localhost:1313/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="影子的博客" />
+<link rel="canonical" href="http://localhost:1313/post/%E6%B5%85%E6%9E%90url/" />
+
 
 
 
@@ -58,18 +59,26 @@
 
 
 
-<meta property="og:title" content="影子的博客" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/" />
+<meta property="og:title" content="浅析URL" />
+<meta property="og:description" content="URL 包含那几部分，每部分分别有什么作用 URL 包含 协议&#43; 域名或 IP&#43;端口号&#43;路径&#43; 查询字符串&#43;锚点 例子 http://www.baidu.com/s?wd=hi&amp;rsv_spt=1#5 作用 协议为 HTTP 协议和 HTTPS 协议，规定访问和返回格式" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/%E6%B5%85%E6%9E%90url/" />
+<meta property="article:published_time" content="2020-04-25T17:13:37+08:00" />
+<meta property="article:modified_time" content="2020-04-25T17:13:37+08:00" />
+<meta itemprop="name" content="浅析URL">
+<meta itemprop="description" content="URL 包含那几部分，每部分分别有什么作用 URL 包含 协议&#43; 域名或 IP&#43;端口号&#43;路径&#43; 查询字符串&#43;锚点 例子 http://www.baidu.com/s?wd=hi&amp;rsv_spt=1#5 作用 协议为 HTTP 协议和 HTTPS 协议，规定访问和返回格式">
 
-<meta property="og:updated_time" content="2020-04-25T17:13:37+08:00" />
-<meta itemprop="name" content="影子的博客">
-<meta itemprop="description" content="Hugo theme jane example site.">
 
+<meta itemprop="datePublished" content="2020-04-25T17:13:37&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-25T17:13:37&#43;08:00" />
+<meta itemprop="wordCount" content="644">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="影子的博客"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content="浅析URL"/>
+<meta name="twitter:description" content="URL 包含那几部分，每部分分别有什么作用 URL 包含 协议&#43; 域名或 IP&#43;端口号&#43;路径&#43; 查询字符串&#43;锚点 例子 http://www.baidu.com/s?wd=hi&amp;rsv_spt=1#5 作用 协议为 HTTP 协议和 HTTPS 协议，规定访问和返回格式"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -236,7 +245,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -328,103 +337,164 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
-  
-  
+          <article class="post bg-white">
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">浅析URL</h1>
       
-      <a class="post-link" href="/post/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/"></a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2020-04-25" class="post-time">
+          2020-04-25
+        </time>
+        
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="0001-01-01" class="post-time">
-        0001-01-01
-      </time>
-      
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
     
-    <div class="post-summary">
-      前端代码规范 Front Standard Guide
-前端 JS 项目开发规范 本文来自 B 站：老陈打码。
-规范的目的是为了编写高质量的代码，让你的团队成员每天得心情都是愉悦的，大家在一起是快乐的。
-引自《阿里规约》的开头片段：
-&mdash;-现代软件架构的复杂性需要协同开发完成，如何高效地协同呢？无规矩不成方圆，无规范难以协同，比如，制订交通法规表面上是要限制行车权，实际上是保障公众的人身安全，试想如果没有限速，没有红绿灯，谁还敢上路行驶。对软件来说，适当的规范和标准绝不是消灭代码内容的创造性、优雅性，而是限制过度个性化，以一种普遍认可的统一方式一起做事，提升协作效率，降低沟通成本。代码的字里行间流淌的是软件系统的血液，质量的提升是尽可能少踩坑，杜绝踩重复的坑，切实提升系统稳定性，码出质量。
-一、编程规约 (一)命名规范 1.1.1 项目命名 全部采用小写方式， 以中划线分隔。
-正例：mall-management-system
-反例：mall_management-system / mallManagementSystem
-1.1.2 目录命名 全部采用小写方式， 以中划线分隔，有复数结构时，要采用复数命名法， 缩写不用复数
-正例： scripts / styles / components / images / utils / layouts / demo-styles / demo-scripts / img / doc
-反例： script / style / demo_scripts / demoStyles / imgs / docs
-【特殊】VUE 的项目中的 components 中的组件目录，使用 kebab-case 命名
-正例： head-search / page-loading / authorized / notice-icon
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/" class="read-more-link">阅读全文</a>
-    </div>
-    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#url-包含那几部分-每部分分别有什么作用">URL 包含那几部分，每部分分别有什么作用</a></li>
+<li><a href="#dns-的作用是什么-nslookup-命令怎么用">DNS 的作用是什么，nslookup 命令怎么用</a></li>
+<li><a href="#ip-的作用是什么-ping-命令怎么用">IP 的作用是什么，ping 命令怎么用</a></li>
+<li><a href="#域名是什么-分别哪几类域名">域名是什么，分别哪几类域名</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
-</article>
+</div>
 
-  
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
+    
+    <div class="post-content">
       
-      <li >
-        <a href="/">1</a>
-      </li>
+
+<h2 id="url-包含那几部分-每部分分别有什么作用">URL 包含那几部分，每部分分别有什么作用</h2>
+
+<ol>
+<li>URL 包含 协议+ 域名或 IP+端口号+路径+ 查询字符串+锚点
+例子 <a href="http://www.baidu.com/s?wd=hi&amp;rsv_spt=1#5">http://www.baidu.com/s?wd=hi&amp;rsv_spt=1#5</a></li>
+<li>作用
+
+<ul>
+<li>协议为 HTTP 协议和 HTTPS 协议，规定访问和返回格式，即服务器与浏览器之间信息规范的标准</li>
+<li>域名或 IP 接收信息和发送新的终端地址</li>
+<li>端口号区分服务器的服务类型 HTTPS 默认端口 443，HTTP 默认端口 80</li>
+<li>路径 确定访问文件的具体位置</li>
+<li>查询字符串 也相当于请求参数 例如 language=cn</li>
+<li>确定访问的页面位置</li>
+</ul></li>
+</ol>
+
+<h2 id="dns-的作用是什么-nslookup-命令怎么用">DNS 的作用是什么，nslookup 命令怎么用</h2>
+
+<ol>
+<li>DNS 的全程是 Domain Name System，主要作用是域名解析</li>
+<li>nslookup 命令
+
+<ul>
+<li>Nslooup(name server lookup)是一个用于查询 internet 域名信息或诊断 DNS 服务器问题的工具。</li>
+<li>在命令行敲入 nslookup baidu.com 就可以查询 baidu.com 域名信息</li>
+</ul></li>
+</ol>
+
+<h2 id="ip-的作用是什么-ping-命令怎么用">IP 的作用是什么，ping 命令怎么用</h2>
+
+<ol>
+<li>IP 是 Internet Protocol（网际互连协议）的缩写，是 TCP/IP 体系中的网络层协议。IP 分为内网和外网 IP。</li>
+<li>作用：设计 IP 的目的是提高网络的可扩展性：一是解决互联网问题，实现大规模、异构网络的互联互通；二是分割顶层网络应用和底层网络技术之间的耦合关系，以利于两者的独立发展。</li>
+<li>ping 命令 ping baidu.com</li>
+</ol>
+
+<h2 id="域名是什么-分别哪几类域名">域名是什么，分别哪几类域名</h2>
+
+<ol>
+<li>域名可以说是一个 IP 地址的代称，目的是为了便于记忆后者。是互联网上某个计算机或组的一种身份标识，用于在传输数据时的电子方位标识，服务器主机就是用于服务于互联网的 PC 的计算机服务设备。</li>
+<li>域名分为顶级域名（国家及地区双字代码顶级域（国家和地区顶级域）和通用顶级域如 .com | .edu | .org | .net）、子域名（例如，在 zh.wikipedia.org 中，wikipedia 是二级域名。w3.org 中，w3 也是二级域名，与前例中的 wikipedia 属于一个层面。）、国际化域名 包括：： 。</li>
+</ol>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">xianmin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-04-25
       
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
       
-      <li  class="active" >
-        <a href="/page/3/">3</a>
-      </li>
+
       
-    </ul>
-  </nav>
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/http%E5%85%A5%E9%97%A8/">
+            <span class="next-text nav-default">Http入门</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
 
   
   
 
+  
+  
 
+  
 
+  
+  
 
+  
+
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>

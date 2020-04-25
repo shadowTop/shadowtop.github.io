@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Apr 2020 08:01:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 17:13:37 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>浅析URL</title>
+      <link>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</link>
+      <pubDate>Sat, 25 Apr 2020 17:13:37 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E6%B5%85%E6%9E%90url/</guid>
+      <description>URL 包含那几部分，每部分分别有什么作用 URL 包含 协议+ 域名或 IP+端口号+路径+ 查询字符串+锚点 例子 http://www.baidu.com/s?wd=hi&amp;amp;rsv_spt=1#5 作用 协议为 HTTP 协议和 HTTPS 协议，规定访问和返回格式</description>
+    </item>
+    
+    <item>
+      <title>Http入门</title>
+      <link>http://localhost:1313/post/http%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Sat, 25 Apr 2020 16:07:00 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/http%E5%85%A5%E9%97%A8/</guid>
+      <description>网络和 IP 如何获取外网 IP 租用宽带，然后使用路由器广播出来无线 wifi 连接这个 wifi 的设备都是同一个外网 IP 重启路由器可能会被重新分配外网 IP 内网 IP 一般为 192.198.1.1 几</description>
+    </item>
     
     <item>
       <title>Css知识总结</title>
