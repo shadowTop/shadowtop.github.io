@@ -6,7 +6,7 @@
     <description>Recent content on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Apr 2020 08:01:34 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 25 Apr 2020 08:01:34 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -35,295 +35,9 @@
     </item>
     
     <item>
-      <title>Css知识总结</title>
-      <link>http://localhost:1313/post/css/</link>
-      <pubDate>Tue, 21 Apr 2020 08:01:34 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/css/</guid>
-      
-        <description>&lt;p&gt;#&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>HTML常用标签</title>
-      <link>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
-      <pubDate>Mon, 13 Apr 2020 08:49:33 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
-      
-        <description>
-
-&lt;h1 id=&#34;a标签&#34;&gt;a标签&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;跳转到外部页面，跳转到内部锚点，跳转到邮箱或者电话&lt;/p&gt;
-
-&lt;h2 id=&#34;a标签的属性&#34;&gt;a标签的属性&lt;/h2&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;href 取值用法&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;网址  例如&lt;a href=&#34;https://google.com&#34;&gt;https://google.com&lt;/a&gt;  &lt;a href=&#34;http://google.com&#34;&gt;http://google.com&lt;/a&gt;  //google.com&lt;/li&gt;
-&lt;li&gt;路径  /a/b/c  或a/b/c  index.html或 ./index.html&lt;/li&gt;
-&lt;li&gt;伪协议   javascript:代码; 直接执行其中的代码，为空时不响应&lt;/li&gt;
-&lt;li&gt;mailto:邮箱&lt;/li&gt;
-&lt;li&gt;tel：手机号&lt;/li&gt;
-&lt;li&gt;id href = #xxx  写入的为当前页面的标签id可以用来作为目录&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;target的取值&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;内置名字  _blank在新建页打开  _top在最外层窗口打开，在使用了多个iframe之后   _parent在父窗口打开  _ self在当前窗口打开&lt;/li&gt;
-&lt;li&gt;程序员命名  window的name  在target的属性中写 窗口名xxx 如果没有此窗口 新建一个窗口命名为xxx iframe 也可&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;download&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;不是打开页面是下载页面 ，很多浏览器不支持&lt;/p&gt;
-
-&lt;h1 id=&#34;img-标签&#34;&gt;img 标签&lt;/h1&gt;
-
-&lt;p&gt;发出get请求，展示一张图片&lt;/p&gt;
-
-&lt;h2 id=&#34;img标签属性&#34;&gt;img标签属性&lt;/h2&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;alt 中写入提示信息，在加载失败后用作告知用户部分内容&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;height 和width 对于图片写高或者宽，另一个值自适应&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;src 图片地址&lt;/p&gt;
-
-&lt;h2 id=&#34;img标签事件&#34;&gt;img标签事件&lt;/h2&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;onload事件和onerror事件&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;用法 可以在js中对于加载失败的图片进行替换或者其他备份地址&lt;/p&gt;
-
-&lt;h2 id=&#34;响应式&#34;&gt;响应式&lt;/h2&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;在img的css中写  max-width:100%;&lt;/p&gt;
-
-&lt;h2 id=&#34;可替换元素&#34;&gt;可替换元素&lt;/h2&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;可替换元素的展现效果不是由css来控制的，这些元素是一种外部对象，他们外观的渲染是独立与css的。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;css可以影响可替换元素的位置，但不会影响到可替换元素自身的内容。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;典型的可替换元素有 ifranme video embed  img&lt;/p&gt;
-
-&lt;h1 id=&#34;table-标签&#34;&gt;table 标签&lt;/h1&gt;
-
-&lt;h2 id=&#34;示例代码&#34;&gt;示例代码&lt;/h2&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;table&amp;gt;
-&amp;lt;thead&amp;gt;
-&amp;lt;tr&amp;gt;
-  &amp;lt;th&amp;gt;Header content 1&amp;lt;/th&amp;gt;
-  &amp;lt;th&amp;gt;Header content 2&amp;lt;/th&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;/thead&amp;gt;
-&amp;lt;tfoot&amp;gt;
-&amp;lt;tr&amp;gt;
-  &amp;lt;td&amp;gt;Footer content 1&amp;lt;/td&amp;gt;
-  &amp;lt;td&amp;gt;Footer content 2&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;/tfoot&amp;gt;
-&amp;lt;tbody&amp;gt;
-&amp;lt;tr&amp;gt;
-  &amp;lt;td&amp;gt;Body content 1&amp;lt;/td&amp;gt;
-  &amp;lt;td&amp;gt;Body content 2&amp;lt;/td&amp;gt;
-&amp;lt;/tr&amp;gt;
-&amp;lt;/tbody&amp;gt;
-&amp;lt;/table&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;table-相关的样式&#34;&gt;table 相关的样式&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;table-layout
-
-&lt;ul&gt;
-&lt;li&gt;auto
-大多数浏览器采用自动表格布局算法对表格布局。表格及单元格的宽度取决于其包含的内容。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;fixed
-表格和列的宽度通过表格的宽度来设置，某一列的宽度仅由该列首行的单元格决定。在当前列中，该单元格所在行之后的行并不会影响整个列宽。&lt;/li&gt;
-&lt;li&gt;border-collapse
-
-&lt;ul&gt;
-&lt;li&gt;border-collapse CSS 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。&lt;/li&gt;
-&lt;li&gt;collapse
-相邻的单元格共用同一条边框（采用 collapsed-border 表格渲染模型）。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;separate
-默认值。每个单元格拥有独立的边框（采用 separated-border 表格渲染模型）。&lt;/li&gt;
-&lt;li&gt;bordere-spacing&lt;/li&gt;
-&lt;li&gt;该属性只适用于 border-collapse 值是 separate 的时候。border-spacing 属性指定相邻单元格边框之间的距离（只适用于 边框分离模式 ）。&lt;/li&gt;
-&lt;li&gt;示例 &lt;code&gt;table { border-spacing: 10px 5px; }&lt;/code&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h1 id=&#34;from标签&#34;&gt;from标签&lt;/h1&gt;
-
-&lt;p&gt;发get或post请求，然后刷新页面
- ## 属性
- 1. action
-    一个处理此表单信息的程序所在的URL。
- 2. autocomplete
-    用于指示 input 元素是否能够拥有一个默认值，此默认值是由浏览器自动补全的。此设定可以被属于此表单的子元素的 autocomplete 属性覆盖。 可能的值有：
-    - off：在每一个用到的输入域里，用户必须显式的输入一个
-    值，或者document 以它自己的方式提供自动补全；浏览器不会自动补全输入。
-    - on：浏览器能够根据用户之前在表单里输入的值自动补全。
-3. method
-    浏览器使用这种 HTTP 方式来提交 表单. 可能的值有：
-    - post：指的是 HTTP POST 方法；表单数据会包含在表单体内然后发送给服务器.
-    - get：指的是 HTTP GET 方法；表单数据会附加在 action 属性的URI中，并以 &amp;lsquo;?&amp;rsquo; 作为分隔符，然后这样得到的 URI 再发送给服务器。如果这样做（数据暴露在 URI 中）没什么副作用，或者表单仅包含ASCII字符时，再考虑使用这种方法吧。
-4. target
-   - _self：在当前 HTML 4 或 HTML5 文档页面重新加载返回值。是默认值。译注：也就是说，如果此文档在一个frame中的话，self是在当前frame（document）中重新加载的，而不是整个页面（window）。
-   - _blank：以新的 HTML 4 或 HTML5 文档窗口加载返回值。
-   - _parent：在父级的 frame 中以 HTML 4 或 HTML 5 文档形式加载返回值，如果没有父级的frame，行为和_self一致。
-   - _top：如果是 HTML 4 文档：清空当前文档，加载返回内容；HTML5：在当前文档的最高级内加载返回值，如果没有父级，和_self的行为一致。&lt;/p&gt;
-
-&lt;h1 id=&#34;input标签&#34;&gt;input标签&lt;/h1&gt;
-
-&lt;p&gt;作用 让用户输入内容&lt;/p&gt;
-
-&lt;h2 id=&#34;input-属性&#34;&gt;input 属性&lt;/h2&gt;
-
-&lt;p&gt;1.type: button/checkbox/email/file/hidden(完成系统填写提交)/number/password/radio/search/submit/tel/text
-- &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input&#34;&gt;全部属性详解&lt;/a&gt;
-2. 其他 name/autofocus/checked/disabled/maxlength/pattern/value/placeholder
-3. 事件 onchange/onfocus.onblur
-4. 验证器&lt;/p&gt;
-
-&lt;h3 id=&#34;注意事项&#34;&gt;注意事项&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;一般不监听input的click事件&lt;/li&gt;
-&lt;li&gt;form里面的input要有name&lt;/li&gt;
-&lt;li&gt;form里面要放一个type=submit才能出发submit事件&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>HTML 入门笔记</title>
-      <link>http://localhost:1313/post/html/</link>
-      <pubDate>Fri, 10 Apr 2020 13:11:41 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/html/</guid>
-      
-        <description>&lt;ol&gt;
-&lt;li&gt;HTML 的历史及简介
-
-&lt;ul&gt;
-&lt;li&gt;HTML 是超文本标记语言，用于描述、定义网站内容。
-HTML 在 1990 左右诞生，发明人是 Tim Berners-Lee(李爵士)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;如何书写 HTML - 起手式
-
-&lt;ul&gt;
-&lt;li&gt;在使用 VScode 进行编写 html 文件时，先写一个!再敲 tab 键，编辑器可以自动生成 html 的基本框架 - 这些标签中分别规定了文档类型、语言、标题以及设备兼容&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;HTML 中常用来表示章节的标签
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;h1&amp;gt;–&amp;lt;h6&amp;gt;&lt;/code&gt; 标题(Heading)元素呈现了六个不同的级别的标题，&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; 级别最高，而 &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; 级别最低。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;元素表示一个包含在 HTML 文档中的独立部分，它没有更具体的语义元素来表示，一般来说会有包含一个标题。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。​​&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; 元素呈现了文档的&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;或应用的主体部分。主体部分由与文档直接相关，或者扩展于文档的中心主题、应用的主要功能部分的内容组成。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt;元素表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;HTML 中的全局属性&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;全局属性是所有 HTML 元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;class
-一个以空格分隔的元素的类名（classes ）列表，它允许 CSS 和 Javascript 通过类选择器 (class selectors) 或 DOM 方法( document.getElementsByClassName)来选择和访问特定的元素。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;id
-定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。 其目的是在链接（使用片段标识符），脚本或样式（使用 CSS）时标识元素。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;contenteditable
-一个枚举属性（enumerated attribute），表示元素是否可被用户编辑。 如果可以，浏览器会调整元素的部件（widget）以允许编辑。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;hidden
-布尔属性表示该元素尚未或不再相关。例如，它可用于隐藏在登录过程完成之前无法使用的页面元素。浏览器不会呈现此类元素。不得使用此属性隐藏可合法显示的内容&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;style
-含要应用于元素的 CSS 样式声明。 请注意，建议在单独的文件中定义样式。 该属性和&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;元素主要用于快速样式化，例如用于测试目的。&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;tabindex
-整数属性，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航，如果是，则表示哪个位置。它可能需要几个值：&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;负值表示该元素应该是可聚焦的，但不应通过顺序键盘导航到达;&lt;/li&gt;
-&lt;li&gt;0 表示元素应通过顺序键盘导航可聚焦和可到达，但其相对顺序由平台约定定义;&lt;/li&gt;
-&lt;li&gt;正值意味着元素应该可以通过顺序键盘导航进行聚焦和访问;元素聚焦的顺序是 tabindex 的增加值。如果多个元素共享相同的 tabindex，则它们的相对顺序遵循它们在文档中的相对位置。&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;title
-包含表示与其所属元素相关信息的文本。 这些信息通常可以作为提示呈现给用户,但不是必须的。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;常见的内容标签&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;元素（或称锚元素）可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;Strong 元素 表示文本十分重要，一般用粗体显示。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; HTML 着重元素 标记出需要用户着重阅读的内容， &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;元素呈现一段计算机代码. 默认情况下, 它以浏览器的默认等宽字体显示。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 开始标签后的换行符也会被省略)&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>如何使用Hugo搭建个人博客</title>
-      <link>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Fri, 10 Apr 2020 09:48:30 +0800</pubDate>
-      
-      <guid>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
-      
-        <description>&lt;ol&gt;
-&lt;li&gt;安装 hugo.exe
-
-&lt;ul&gt;
-&lt;li&gt;下载 在&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;huge releases 页面&lt;/a&gt; 下载例如 hugo_0.68.3_Windows-64bit.zip 的压缩包，具体版本以自己的系统下载&lt;/li&gt;
-&lt;li&gt;安装配置 将下载好的压缩包解压，将 hugo.exe 放到 E:\Software\hugo 目录下，注意目录不要有空格和中文，然后将 E:\Software\hugo\ 添加到 PATH 中，重启终端后，在 Cmder 中运行 hugo version 查看版本&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;快速搭建博客
-
-&lt;ul&gt;
-&lt;li&gt;访问&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo&lt;/a&gt;官网，点击 Quick Start 按钮快速开始&lt;/li&gt;
-&lt;li&gt;在官方文档依次进行 STep2-Step7 的操作，完成了从站点创建、主题配置、新建博客、开启 Hugo server 等步骤，此时打开&lt;a href=&#34;http://localhost:1313/&#34;&gt;本地页面&lt;/a&gt;就可以看到你的博客预览&lt;/li&gt;
-&lt;li&gt;运行 hugo -D ，会创建一个 public 目录，这个目录就是博客站点，可以使用 hugo server 进行网站预览
-&lt;img src=&#34;http://localhost:1313/1.png&#34; alt=&#34;操作&#34; /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title></title>
+      <title>前端代码开发规范</title>
       <link>http://localhost:1313/post/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 25 Apr 2020 08:01:34 +0800</pubDate>
       
       <guid>http://localhost:1313/post/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/</guid>
       
@@ -1579,6 +1293,292 @@ store 按照业务进行拆分不同的 js 文件
 &lt;h5 id=&#34;2-删除无用代码&#34;&gt;2) 删除无用代码&lt;/h5&gt;
 
 &lt;p&gt;因使用了 git/svn 等代码版本工具，对于无用代码必须及时删除，例如：一些调试的 console 语句、无用的弃用功能代码。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Css知识总结</title>
+      <link>http://localhost:1313/post/css/</link>
+      <pubDate>Tue, 21 Apr 2020 08:01:34 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/css/</guid>
+      
+        <description>&lt;p&gt;#&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>HTML常用标签</title>
+      <link>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 13 Apr 2020 08:49:33 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/</guid>
+      
+        <description>
+
+&lt;h1 id=&#34;a标签&#34;&gt;a标签&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;跳转到外部页面，跳转到内部锚点，跳转到邮箱或者电话&lt;/p&gt;
+
+&lt;h2 id=&#34;a标签的属性&#34;&gt;a标签的属性&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;href 取值用法&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;网址  例如&lt;a href=&#34;https://google.com&#34;&gt;https://google.com&lt;/a&gt;  &lt;a href=&#34;http://google.com&#34;&gt;http://google.com&lt;/a&gt;  //google.com&lt;/li&gt;
+&lt;li&gt;路径  /a/b/c  或a/b/c  index.html或 ./index.html&lt;/li&gt;
+&lt;li&gt;伪协议   javascript:代码; 直接执行其中的代码，为空时不响应&lt;/li&gt;
+&lt;li&gt;mailto:邮箱&lt;/li&gt;
+&lt;li&gt;tel：手机号&lt;/li&gt;
+&lt;li&gt;id href = #xxx  写入的为当前页面的标签id可以用来作为目录&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;target的取值&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;内置名字  _blank在新建页打开  _top在最外层窗口打开，在使用了多个iframe之后   _parent在父窗口打开  _ self在当前窗口打开&lt;/li&gt;
+&lt;li&gt;程序员命名  window的name  在target的属性中写 窗口名xxx 如果没有此窗口 新建一个窗口命名为xxx iframe 也可&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;download&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;不是打开页面是下载页面 ，很多浏览器不支持&lt;/p&gt;
+
+&lt;h1 id=&#34;img-标签&#34;&gt;img 标签&lt;/h1&gt;
+
+&lt;p&gt;发出get请求，展示一张图片&lt;/p&gt;
+
+&lt;h2 id=&#34;img标签属性&#34;&gt;img标签属性&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;alt 中写入提示信息，在加载失败后用作告知用户部分内容&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;height 和width 对于图片写高或者宽，另一个值自适应&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;src 图片地址&lt;/p&gt;
+
+&lt;h2 id=&#34;img标签事件&#34;&gt;img标签事件&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;onload事件和onerror事件&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;用法 可以在js中对于加载失败的图片进行替换或者其他备份地址&lt;/p&gt;
+
+&lt;h2 id=&#34;响应式&#34;&gt;响应式&lt;/h2&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;在img的css中写  max-width:100%;&lt;/p&gt;
+
+&lt;h2 id=&#34;可替换元素&#34;&gt;可替换元素&lt;/h2&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;可替换元素的展现效果不是由css来控制的，这些元素是一种外部对象，他们外观的渲染是独立与css的。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;css可以影响可替换元素的位置，但不会影响到可替换元素自身的内容。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;典型的可替换元素有 ifranme video embed  img&lt;/p&gt;
+
+&lt;h1 id=&#34;table-标签&#34;&gt;table 标签&lt;/h1&gt;
+
+&lt;h2 id=&#34;示例代码&#34;&gt;示例代码&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;table&amp;gt;
+&amp;lt;thead&amp;gt;
+&amp;lt;tr&amp;gt;
+  &amp;lt;th&amp;gt;Header content 1&amp;lt;/th&amp;gt;
+  &amp;lt;th&amp;gt;Header content 2&amp;lt;/th&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/thead&amp;gt;
+&amp;lt;tfoot&amp;gt;
+&amp;lt;tr&amp;gt;
+  &amp;lt;td&amp;gt;Footer content 1&amp;lt;/td&amp;gt;
+  &amp;lt;td&amp;gt;Footer content 2&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/tfoot&amp;gt;
+&amp;lt;tbody&amp;gt;
+&amp;lt;tr&amp;gt;
+  &amp;lt;td&amp;gt;Body content 1&amp;lt;/td&amp;gt;
+  &amp;lt;td&amp;gt;Body content 2&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/tbody&amp;gt;
+&amp;lt;/table&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;table-相关的样式&#34;&gt;table 相关的样式&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;table-layout
+
+&lt;ul&gt;
+&lt;li&gt;auto
+大多数浏览器采用自动表格布局算法对表格布局。表格及单元格的宽度取决于其包含的内容。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;fixed
+表格和列的宽度通过表格的宽度来设置，某一列的宽度仅由该列首行的单元格决定。在当前列中，该单元格所在行之后的行并不会影响整个列宽。&lt;/li&gt;
+&lt;li&gt;border-collapse
+
+&lt;ul&gt;
+&lt;li&gt;border-collapse CSS 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。&lt;/li&gt;
+&lt;li&gt;collapse
+相邻的单元格共用同一条边框（采用 collapsed-border 表格渲染模型）。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;separate
+默认值。每个单元格拥有独立的边框（采用 separated-border 表格渲染模型）。&lt;/li&gt;
+&lt;li&gt;bordere-spacing&lt;/li&gt;
+&lt;li&gt;该属性只适用于 border-collapse 值是 separate 的时候。border-spacing 属性指定相邻单元格边框之间的距离（只适用于 边框分离模式 ）。&lt;/li&gt;
+&lt;li&gt;示例 &lt;code&gt;table { border-spacing: 10px 5px; }&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;from标签&#34;&gt;from标签&lt;/h1&gt;
+
+&lt;p&gt;发get或post请求，然后刷新页面
+ ## 属性
+ 1. action
+    一个处理此表单信息的程序所在的URL。
+ 2. autocomplete
+    用于指示 input 元素是否能够拥有一个默认值，此默认值是由浏览器自动补全的。此设定可以被属于此表单的子元素的 autocomplete 属性覆盖。 可能的值有：
+    - off：在每一个用到的输入域里，用户必须显式的输入一个
+    值，或者document 以它自己的方式提供自动补全；浏览器不会自动补全输入。
+    - on：浏览器能够根据用户之前在表单里输入的值自动补全。
+3. method
+    浏览器使用这种 HTTP 方式来提交 表单. 可能的值有：
+    - post：指的是 HTTP POST 方法；表单数据会包含在表单体内然后发送给服务器.
+    - get：指的是 HTTP GET 方法；表单数据会附加在 action 属性的URI中，并以 &amp;lsquo;?&amp;rsquo; 作为分隔符，然后这样得到的 URI 再发送给服务器。如果这样做（数据暴露在 URI 中）没什么副作用，或者表单仅包含ASCII字符时，再考虑使用这种方法吧。
+4. target
+   - _self：在当前 HTML 4 或 HTML5 文档页面重新加载返回值。是默认值。译注：也就是说，如果此文档在一个frame中的话，self是在当前frame（document）中重新加载的，而不是整个页面（window）。
+   - _blank：以新的 HTML 4 或 HTML5 文档窗口加载返回值。
+   - _parent：在父级的 frame 中以 HTML 4 或 HTML 5 文档形式加载返回值，如果没有父级的frame，行为和_self一致。
+   - _top：如果是 HTML 4 文档：清空当前文档，加载返回内容；HTML5：在当前文档的最高级内加载返回值，如果没有父级，和_self的行为一致。&lt;/p&gt;
+
+&lt;h1 id=&#34;input标签&#34;&gt;input标签&lt;/h1&gt;
+
+&lt;p&gt;作用 让用户输入内容&lt;/p&gt;
+
+&lt;h2 id=&#34;input-属性&#34;&gt;input 属性&lt;/h2&gt;
+
+&lt;p&gt;1.type: button/checkbox/email/file/hidden(完成系统填写提交)/number/password/radio/search/submit/tel/text
+- &lt;a href=&#34;https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/input&#34;&gt;全部属性详解&lt;/a&gt;
+2. 其他 name/autofocus/checked/disabled/maxlength/pattern/value/placeholder
+3. 事件 onchange/onfocus.onblur
+4. 验证器&lt;/p&gt;
+
+&lt;h3 id=&#34;注意事项&#34;&gt;注意事项&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一般不监听input的click事件&lt;/li&gt;
+&lt;li&gt;form里面的input要有name&lt;/li&gt;
+&lt;li&gt;form里面要放一个type=submit才能出发submit事件&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>HTML 入门笔记</title>
+      <link>http://localhost:1313/post/html/</link>
+      <pubDate>Fri, 10 Apr 2020 13:11:41 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/html/</guid>
+      
+        <description>&lt;ol&gt;
+&lt;li&gt;HTML 的历史及简介
+
+&lt;ul&gt;
+&lt;li&gt;HTML 是超文本标记语言，用于描述、定义网站内容。
+HTML 在 1990 左右诞生，发明人是 Tim Berners-Lee(李爵士)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;如何书写 HTML - 起手式
+
+&lt;ul&gt;
+&lt;li&gt;在使用 VScode 进行编写 html 文件时，先写一个!再敲 tab 键，编辑器可以自动生成 html 的基本框架 - 这些标签中分别规定了文档类型、语言、标题以及设备兼容&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;HTML 中常用来表示章节的标签
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;h1&amp;gt;–&amp;lt;h6&amp;gt;&lt;/code&gt; 标题(Heading)元素呈现了六个不同的级别的标题，&lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; 级别最高，而 &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt; 级别最低。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;section&amp;gt;&lt;/code&gt;元素表示一个包含在 HTML 文档中的独立部分，它没有更具体的语义元素来表示，一般来说会有包含一个标题。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;article&amp;gt;&lt;/code&gt;元素表示文档、页面、应用或网站中的独立结构，其意在成为可独立分配的或可复用的结构，如在发布中，它可能是论坛帖子、杂志或新闻文章、博客、用户提交的评论、交互式组件，或者其他独立的内容项目。​​&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;main&amp;gt;&lt;/code&gt; 元素呈现了文档的&lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt;或应用的主体部分。主体部分由与文档直接相关，或者扩展于文档的中心主题、应用的主要功能部分的内容组成。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;aside&amp;gt;&lt;/code&gt;元素表示一个和其余页面内容几乎无关的部分，被认为是独立于该内容的一部分并且可以被单独的拆分出来而不会使整体受影响。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;HTML 中的全局属性&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;全局属性是所有 HTML 元素共有的属性; 它们可以用于所有元素，即使属性可能对某些元素不起作用。&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;class
+一个以空格分隔的元素的类名（classes ）列表，它允许 CSS 和 Javascript 通过类选择器 (class selectors) 或 DOM 方法( document.getElementsByClassName)来选择和访问特定的元素。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;id
+定义唯一标识符（ID），该标识符在整个文档中必须是唯一的。 其目的是在链接（使用片段标识符），脚本或样式（使用 CSS）时标识元素。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;contenteditable
+一个枚举属性（enumerated attribute），表示元素是否可被用户编辑。 如果可以，浏览器会调整元素的部件（widget）以允许编辑。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;hidden
+布尔属性表示该元素尚未或不再相关。例如，它可用于隐藏在登录过程完成之前无法使用的页面元素。浏览器不会呈现此类元素。不得使用此属性隐藏可合法显示的内容&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;style
+含要应用于元素的 CSS 样式声明。 请注意，建议在单独的文件中定义样式。 该属性和&lt;code&gt;&amp;lt;style&amp;gt;&lt;/code&gt;元素主要用于快速样式化，例如用于测试目的。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;tabindex
+整数属性，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航，如果是，则表示哪个位置。它可能需要几个值：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;负值表示该元素应该是可聚焦的，但不应通过顺序键盘导航到达;&lt;/li&gt;
+&lt;li&gt;0 表示元素应通过顺序键盘导航可聚焦和可到达，但其相对顺序由平台约定定义;&lt;/li&gt;
+&lt;li&gt;正值意味着元素应该可以通过顺序键盘导航进行聚焦和访问;元素聚焦的顺序是 tabindex 的增加值。如果多个元素共享相同的 tabindex，则它们的相对顺序遵循它们在文档中的相对位置。&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;title
+包含表示与其所属元素相关信息的文本。 这些信息通常可以作为提示呈现给用户,但不是必须的。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;常见的内容标签&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt;元素（或称锚元素）可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;Strong 元素 表示文本十分重要，一般用粗体显示。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; HTML 着重元素 标记出需要用户着重阅读的内容， &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;元素是可以嵌套的，嵌套层次越深，则其包含的内容被认定为越需要着重阅读。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;元素呈现一段计算机代码. 默认情况下, 它以浏览器的默认等宽字体显示。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 元素表示预定义格式文本。在该元素中的文本通常按照原文件中的编排，以等宽字体的形式展现出来，文本中的空白符（比如空格和换行符）都会显示出来。(紧跟在 &lt;code&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; 开始标签后的换行符也会被省略)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>如何使用Hugo搭建个人博客</title>
+      <link>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 10 Apr 2020 09:48:30 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      
+        <description>&lt;ol&gt;
+&lt;li&gt;安装 hugo.exe
+
+&lt;ul&gt;
+&lt;li&gt;下载 在&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;huge releases 页面&lt;/a&gt; 下载例如 hugo_0.68.3_Windows-64bit.zip 的压缩包，具体版本以自己的系统下载&lt;/li&gt;
+&lt;li&gt;安装配置 将下载好的压缩包解压，将 hugo.exe 放到 E:\Software\hugo 目录下，注意目录不要有空格和中文，然后将 E:\Software\hugo\ 添加到 PATH 中，重启终端后，在 Cmder 中运行 hugo version 查看版本&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;快速搭建博客
+
+&lt;ul&gt;
+&lt;li&gt;访问&lt;a href=&#34;https://gohugo.io/getting-started/quick-start/&#34;&gt;Hugo&lt;/a&gt;官网，点击 Quick Start 按钮快速开始&lt;/li&gt;
+&lt;li&gt;在官方文档依次进行 STep2-Step7 的操作，完成了从站点创建、主题配置、新建博客、开启 Hugo server 等步骤，此时打开&lt;a href=&#34;http://localhost:1313/&#34;&gt;本地页面&lt;/a&gt;就可以看到你的博客预览&lt;/li&gt;
+&lt;li&gt;运行 hugo -D ，会创建一个 public 目录，这个目录就是博客站点，可以使用 hugo server 进行网站预览
+&lt;img src=&#34;http://localhost:1313/1.png&#34; alt=&#34;操作&#34; /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>
