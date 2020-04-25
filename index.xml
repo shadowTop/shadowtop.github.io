@@ -41,7 +41,109 @@
       
       <guid>http://localhost:1313/post/css/</guid>
       
-        <description>&lt;p&gt;#&lt;/p&gt;
+        <description>
+
+&lt;h2 id=&#34;浏览器渲染原理&#34;&gt;浏览器渲染原理&lt;/h2&gt;
+
+&lt;p&gt;要了解浏览器渲染页面的过程，首先得知道一个名词 &amp;ndash; 关键路径渲染。关键渲染路径是指与当前用户操作有关的内容。例如用户在浏览器中打开一个页面，其中页面所显示的东西就是当前用户操作相关的内容，也就是浏览器从服务器那收到的 HTML、CSS、JavaScript 等相关的资源，然后经过一系列处理后渲染出来的 web 页面。
+浏览器渲染的过程主要包括以下六步：&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;根据 HTML 构建 HTML 树（DOM）&lt;/li&gt;
+&lt;li&gt;根据 CSS 构建 CSS 树（CSSOM）&lt;/li&gt;
+&lt;li&gt;将两棵树合并成为一颗渲染树（render tree ）&lt;/li&gt;
+&lt;li&gt;Layout 布局 (文档流、盒模型、计算大小和位置)&lt;/li&gt;
+&lt;li&gt;Paint 绘制（把边框颜色、文字颜色、阴影等画出来）&lt;/li&gt;
+&lt;li&gt;Compose (根据层叠关系展示画面)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;css-动画的两种做法-transition-和-animation&#34;&gt;CSS 动画的两种做法（transition 和 animation）&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;CSS transform 属性允许你旋转，缩放，倾斜或平移给定元素。这是通过修改 CSS 视觉格式化模型的坐标空间来实现的。有四个常用的功能&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;位移 translate 使用示例 &lt;code&gt;transform: translate(120px, 50%);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;缩放 scale 使用示例&lt;code&gt;transform: scale(2, 0.5);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;旋转 rotate 使用示例&lt;code&gt;transform: rotate(0.5turn); transform: rotate(45deg)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;倾斜 skew 使用示例&lt;code&gt;transform: skew(30deg, 20deg);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;组合使用示例 &lt;code&gt;transform: rotate(45deg) translateY(31px);&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;transition CSS 属性是 transition-property，transition-duration，transition-timing-function 和 transition-delay 的一个简写属性。
+
+&lt;ul&gt;
+&lt;li&gt;语法 transition：属性名 时长 过渡时间 延迟 表示所有属性 过渡方式包括 linear 、ease、ease-in、ease-out。&lt;/li&gt;
+&lt;li&gt;代码示例 &lt;code&gt;transition: all 1s ease-out;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;并不是所有的属性都能过渡 display：none=&amp;gt;不能过渡&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;过渡必须要有起始 比如 hover 和非 hover 状态的过渡&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;让过渡具有中间点
+使用两次 transform，用 setTimeout 或者监听 transitionend 事件&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;如何让动画停在最后一帧
+示例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#demo.start{
+animation: xxx 1.5s forwards;
+}
+
+
+@keyframes xxx {
+0% {
+transform: none;
+}
+66.66%{
+transform: translateX(200px);
+}
+100%{
+transform: translateX(200px) translateY(100px);
+}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;上面代码用到了 keyframes 语法@keyframes 规则通过在动画序列中定义关键帧（或 waypoints）的样式来控制 CSS 动画序列中的中间步骤。这比转换更能控制动画序列的中间步骤。
+示例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@keyframes identifier {
+0% { top: 0; left: 0; }
+30% { top: 50px; }
+68%, 72% { left: 50px; }
+100% { top: 100px; left: 100%; }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;CSS animation 属性是 animation-name，animation-duration, animation-timing-function，animation-delay，animation-iteration-count，animation-direction，animation-fill-mode 和 animation-play-state 属性的一个简写属性形式。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;缩写语法 animation:时长|过渡方式|延迟|次数|方向|填充模式|是否暂停|动画名&lt;/li&gt;
+&lt;li&gt;过渡方式：跟 transition 取值一样&lt;/li&gt;
+&lt;li&gt;次数 ：具体次数或者 infinite&lt;/li&gt;
+&lt;li&gt;方向：reverse|alternate|alternate-reverse&lt;/li&gt;
+&lt;li&gt;填充模式：none|forwards|backwards|both&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;是否暂停：paused|running
+&lt;code&gt;animation: .5s heart infinite alternate-reverse;&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;@keyframes heart {
+0%{
+transform: scale(1);
+}
+100%{
+transform: scale(1.2);
+}
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>

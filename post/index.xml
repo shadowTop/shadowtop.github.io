@@ -17,7 +17,7 @@
       <pubDate>Tue, 21 Apr 2020 08:01:34 +0800</pubDate>
       
       <guid>http://localhost:1313/post/css/</guid>
-      <description>#</description>
+      <description>浏览器渲染原理 要了解浏览器渲染页面的过程，首先得知道一个名词 &amp;ndash; 关键路径渲染。关键渲染路径是指与当前用户操作有关的内容。例如用户在浏览器中打开</description>
     </item>
     
     <item>
