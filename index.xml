@@ -6,7 +6,7 @@
     <description>Recent content on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 25 Apr 2020 17:13:37 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 15:08:55 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,214 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>JavaScript初识</title>
+      <link>http://localhost:1313/post/javascript%E5%88%9D%E8%AF%86/</link>
+      <pubDate>Tue, 28 Apr 2020 15:08:55 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/javascript%E5%88%9D%E8%AF%86/</guid>
+      
+        <description>
+
+&lt;h3 id=&#34;前期准备&#34;&gt;前期准备&lt;/h3&gt;
+
+&lt;h4 id=&#34;软能力&#34;&gt;软能力&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;逻辑能力&lt;/li&gt;
+&lt;li&gt;质疑自己的能力 double check&lt;/li&gt;
+&lt;li&gt;抽象思维
+
+&lt;ul&gt;
+&lt;li&gt;定了一份报纸&lt;/li&gt;
+&lt;li&gt;关注了明星微博&lt;/li&gt;
+&lt;li&gt;用 JS 监听了一个按钮的点击事件&lt;/li&gt;
+&lt;li&gt;这三件事情用于共同的模式：发布订阅模式&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;硬能力&#34;&gt;硬能力&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;足够的代码量
+
+&lt;ul&gt;
+&lt;li&gt;如何统计自己的代码行数安装 &lt;code&gt;yarn global add cloc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;足够的概念
+
+&lt;ul&gt;
+&lt;li&gt;不仅要会写，还要会说&lt;/li&gt;
+&lt;li&gt;常用常考 （闭包、原型、类、继承、MVC、Flux、高阶函数、前端工程化）&lt;/li&gt;
+&lt;li&gt;如何积累（在课程中提炼、在大脑中思考、在博客上总结、在代码中实践）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;有足够的采坑经验
+
+&lt;ul&gt;
+&lt;li&gt;做项目，而且是个人项目（所有的代码都是自己写的）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;javascript-概述&#34;&gt;JavaScript 概述&lt;/h3&gt;
+
+&lt;h4 id=&#34;javascript-历史&#34;&gt;JavaScript 历史&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;布兰登发明了 JS 诞生
+
+&lt;ul&gt;
+&lt;li&gt;布莱登临危受命 （公司要求给浏览器添加一个脚本功能、公司要求这个脚本必须蹭 Java 的流量、布莱登花了十天设计了 JS 的最初版本）&lt;/li&gt;
+&lt;li&gt;命名 Mocha=&amp;gt;LiveScript=&amp;gt;JavaScript&lt;/li&gt;
+&lt;li&gt;浏览器一开始同时就支持 Java 和 JavaScript&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;1996 年 11 月，网景向 ECMA 提交语言标准，由于版权问题，JS 语言标准不叫 JavaScript,叫 ECMAScript。&lt;/li&gt;
+&lt;li&gt;由于 IE（01-10），网景将浏览器开源（Firefox）&lt;/li&gt;
+&lt;li&gt;谷歌 04 年雇佣了 Firefox 和 IE 的开发者，08 年发布，11 年超过 Firefox，16 年全区份额 62%&lt;/li&gt;
+&lt;li&gt;移动市场兴起 16 年淘宝天猫不支持 IE6、7&lt;/li&gt;
+&lt;li&gt;ECMAScript 标准的制定&lt;/li&gt;
+&lt;li&gt;JS 与 ECMAScript 的关系&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ECMAScript 是纸上的标准，JS 是浏览器的实现&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;JavaScript 兴起
+
+&lt;ul&gt;
+&lt;li&gt;Gmail 的出现（2004）&lt;/li&gt;
+&lt;li&gt;2005 年，Jesse 将谷歌用到的技术命名为 AJAX（前端技术正式出现）&lt;/li&gt;
+&lt;li&gt;2006 年，JQuery 发布&lt;/li&gt;
+&lt;li&gt;10 年左右中国才有了前端&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;JavaScript 爆发
+
+&lt;ul&gt;
+&lt;li&gt;V8 快如闪电、09 年，Ryan 基于 V8 创建了 Node.js。&lt;/li&gt;
+&lt;li&gt;10 年，Isaac 基于 Node.js 写出了 npm&lt;/li&gt;
+&lt;li&gt;同年，TJ 受 Sina 突然启发，发布了 Express.js&lt;/li&gt;
+&lt;li&gt;期间出来的技术太多（gulp、grunt、yeoman、requirejs、webpack、Angular、React、Vue）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;总结&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;JS 是历史的选择&lt;/li&gt;
+&lt;li&gt;低开高走&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>HTTP全解</title>
+      <link>http://localhost:1313/post/http%E5%85%A8%E8%A7%A3/</link>
+      <pubDate>Sat, 25 Apr 2020 19:58:57 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/http%E5%85%A8%E8%A7%A3/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;请求与响应&#34;&gt;请求与响应&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;如何发送请求
+帮你发送请求的工具叫做用户代理 User Agent&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;用 Chrome 地址栏&lt;/li&gt;
+&lt;li&gt;用 curl 命令&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;后缀并不能表示文件是什么，而是为了告诉 windows 用什么软件去打开它。&lt;/p&gt;
+
+&lt;h3 id=&#34;我们要做一个服务器程序&#34;&gt;我们要做一个服务器程序&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;node.js 有一个 http 模块可以做到&lt;/li&gt;
+&lt;li&gt;注意事项&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;需要写的代码是服务器代码，一般放在服务器上&lt;/li&gt;
+&lt;li&gt;path 是不带查询参数的路径 /x&lt;/li&gt;
+&lt;li&gt;query 是查询餐参数的对象形式{a:&amp;lsquo;1&amp;rsquo;}&lt;/li&gt;
+&lt;li&gt;queryString 是查询参数的字符串形式?a=1&lt;/li&gt;
+&lt;li&gt;pathWithQuery 是带参数的路径，一般不用&lt;/li&gt;
+&lt;li&gt;request 是请求对象&lt;/li&gt;
+&lt;li&gt;response 是响应对象&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;代码逻辑&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;每次收到请求都会把中间的代码执行一遍&lt;/li&gt;
+&lt;li&gt;用 if else 判断路径，并返回响应&lt;/li&gt;
+&lt;li&gt;如果是一支路径，一律返回 200&lt;/li&gt;
+&lt;li&gt;未知路径返回 404&lt;/li&gt;
+&lt;li&gt;Content-Type 表示内容的【类型/语法】&lt;/li&gt;
+&lt;li&gt;response.write()可以填写返回的内容&lt;/li&gt;
+&lt;li&gt;response.end()表示响应可以发给用户了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;请求和响应的写法&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;请求
+请求动词 协议名、版本
+host：域名或 IP
+Accept:text/html
+Content-Type:请求体格式
+回车
+请求体（也就是上传内容）&lt;/li&gt;
+&lt;li&gt;响应
+协议名/版本 状态码 状态字符串
+Content-Type:响应体的格式
+回车
+响应体（也就是下载内容）
+&lt;code&gt;这一部分其实不是很懂 ，只是了解了请求响应格式，状态码是要考察的问题&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;如何让 curl 来构造请求&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;设置请求动词
+-X POST（注意大小写）&lt;/li&gt;
+&lt;li&gt;设置路径和查询参数
+直接在 url 后面加&lt;/li&gt;
+&lt;li&gt;设置请求头
+-H&amp;rsquo;Name:Value&amp;rsquo;或者&amp;ndash;header&amp;rsquo;Name:Value&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;设置请求体
+-d&amp;rsquo;内容&amp;rsquo; 或者&amp;ndash;data&amp;rsquo;内容&amp;rsquo;
+curl 就是个浏览器 可以下载图片&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;用 Node.js 读取请求 设置响应&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;console.log 调试大法&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;购买阿里云服务器&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;部署 Node.js 应用到云服务器&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;这个先放一下
+这个主要是了解一下请求与响应&lt;/p&gt;
+
+&lt;p&gt;本地版的我还没有搞定&lt;/p&gt;
 </description>
       
     </item>
