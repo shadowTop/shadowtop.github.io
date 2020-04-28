@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Apr 2020 15:08:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 16:16:55 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JavaScript的前世今生</title>
+      <link>http://localhost:1313/post/javascript%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/</link>
+      <pubDate>Tue, 28 Apr 2020 16:16:55 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/javascript%E7%9A%84%E5%89%8D%E4%B8%96%E4%BB%8A%E7%94%9F/</guid>
+      <description>JavaScript 概述 JavaScript 历史 布兰登发明了 JS 诞生 布莱登临危受命 （公司要求给浏览器添加一个脚本功能、公司要求这个脚本必须蹭 Java 的流量、布莱登花了十天设计了 JS 的最初</description>
+    </item>
     
     <item>
       <title>JavaScript初识</title>
