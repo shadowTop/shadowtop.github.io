@@ -55,20 +55,16 @@
 &lt;li&gt;命名 Mocha=&amp;gt;LiveScript=&amp;gt;JavaScript&lt;/li&gt;
 &lt;li&gt;浏览器一开始同时就支持 Java 和 JavaScript&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;1996 年 11 月，网景向 ECMA 提交语言标准，由于版权问题，JS 语言标准不叫 JavaScript,叫 ECMAScript。&lt;/li&gt;
-&lt;li&gt;由于 IE（01-10），网景将浏览器开源（Firefox）&lt;/li&gt;
-&lt;li&gt;谷歌 04 年雇佣了 Firefox 和 IE 的开发者，08 年发布，11 年超过 Firefox，16 年全区份额 62%&lt;/li&gt;
-&lt;li&gt;移动市场兴起 16 年淘宝天猫不支持 IE6、7&lt;/li&gt;
-&lt;li&gt;ECMAScript 标准的制定&lt;/li&gt;
-&lt;li&gt;JS 与 ECMAScript 的关系&lt;/li&gt;
-&lt;/ol&gt;
+
+&lt;li&gt;&lt;p&gt;1996 年 11 月，网景向 ECMA 提交语言标准，由于版权问题，JS 语言标准不叫 JavaScript,叫 ECMAScript。&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;JS 与 ECMAScript 的关系&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;ECMAScript 是纸上的标准，JS 是浏览器的实现&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
-&lt;ol&gt;
-&lt;li&gt;JavaScript 兴起
+&lt;li&gt;&lt;p&gt;JavaScript 兴起&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Gmail 的出现（2004）&lt;/li&gt;
@@ -76,7 +72,8 @@
 &lt;li&gt;2006 年，JQuery 发布&lt;/li&gt;
 &lt;li&gt;10 年左右中国才有了前端&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;JavaScript 爆发
+
+&lt;li&gt;&lt;p&gt;JavaScript 爆发&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;V8 快如闪电、09 年，Ryan 基于 V8 创建了 Node.js。&lt;/li&gt;
