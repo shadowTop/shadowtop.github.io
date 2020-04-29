@@ -6,7 +6,7 @@
     <description>Recent content on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Apr 2020 16:16:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 16:49:39 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,133 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>内存图与JS世界</title>
+      <link>http://localhost:1313/post/%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</link>
+      <pubDate>Tue, 28 Apr 2020 16:49:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</guid>
+      
+        <description>
+
+&lt;h3 id=&#34;操作系统常识&#34;&gt;操作系统常识&lt;/h3&gt;
+
+&lt;h4 id=&#34;打开浏览器&#34;&gt;打开浏览器&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;双击 Chrome 图标，就会运行 chrome.exe 文件&lt;/li&gt;
+&lt;li&gt;开启 Chrome 进程，作为主进程&lt;/li&gt;
+&lt;li&gt;主进程会开启一些辅助进程&lt;/li&gt;
+&lt;li&gt;每新建一个网页，就有可能会开启一个子进程&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;浏览器的功能&#34;&gt;浏览器的功能&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;发起请求，下载 HTML，解析 HTML，下载 CSS，解析 CSS，下载 CSS，渲染界面，下载 JS，解析 JS，执行 JS 等&lt;/li&gt;
+&lt;li&gt;功能模块：用户界面、渲染引擎、JS 引擎、存储等&lt;/li&gt;
+&lt;li&gt;上面功能模块一般各处于不同的县城（比进程更小）&lt;/li&gt;
+&lt;li&gt;如果进程是车间，那么县城就是车间里的流水线&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;js-引擎&#34;&gt;JS 引擎&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;V8 引擎，C++编写 。Node.js 用的就是 V8 引擎&lt;/li&gt;
+&lt;li&gt;主要功能
+
+&lt;ul&gt;
+&lt;li&gt;编译：把 JS 代码翻译为机器能执行的字节码或机器码&lt;/li&gt;
+&lt;li&gt;优化：改写代码，使其更高效&lt;/li&gt;
+&lt;li&gt;执行：执行上面的字节码或者机器码&lt;/li&gt;
+&lt;li&gt;垃圾回收：把 JS 用完的内存回收，方便之后再次使用&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&#34;执行-js-代码&#34;&gt;执行 JS 代码&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;准备工作
+
+&lt;ul&gt;
+&lt;li&gt;提供 API：window、document、setTimeout&lt;/li&gt;
+&lt;li&gt;以上功能称为运行环境 runtime env&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;内存
+
+&lt;ul&gt;
+&lt;li&gt;这个部分重点 从瓜分系统来说
+整个内存条 OS 占一部分，然后开了一个 chrome 占了一部分（包括辅助进程），再去开一个 tab 页面用到的内容包括渲染进程、用户界面界面、JS 引擎。
+JS 引擎会用到代码区，所用到的变量，数据对象的一个存储逻辑。
+变量统一放在一个区域，然后变量对应的值会对应在 Stack 区，64 位的存储方式，如果是对象则在 Stack 区生成一个类似索引的东西，对应到 Heap 的一个随机分配的区域，这个区域里存储了这些数据。
+那么如果将这个对象赋值给另一个变量会出现什么呢，也就是同样在 Stack（栈）区给一个同样的索引，连接到 Heap 的区域，如果将这个新的变量中的某个属性赋值，则会改变 Heap 这个区域的值，那么之前的变量的值也会对应的改变&lt;/li&gt;
+&lt;li&gt;规律 数据分为两种：非对象和对象&lt;/li&gt;
+&lt;li&gt;非对象都存在 Stack&lt;/li&gt;
+&lt;li&gt;对象都存在 Heap&lt;/li&gt;
+&lt;li&gt;=号总是会把右边的东西赋值到左边（不存在传值和传址）&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;栈（Stack）和堆（Heap）
+Stack 区特点：每个数据顺序存放
+Heap 区：每个数据随机存放&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;对象篡改实例&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var person = {name:&#39;ning&#39;}
+var person2 = person
+person2.name = &#39;rrr&#39;
+conlose.log(person.name) // &#39;rrr&#39;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;window
+window 由浏览器提供&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;console ,document,对象（Object），数组（array），函数(Function)都挂在 window 上&lt;/li&gt;
+&lt;li&gt;因为方便，挂在 window 上的东西可以在任何地方直接用&lt;/li&gt;
+&lt;li&gt;window 本身也就像是一个变量对应着栈区的一个&amp;rsquo;索引&amp;rsquo;，这个&amp;rsquo;索引&amp;rsquo;对应到 Heap 中，就是 window 的各个属性（console、Object 等）而这些属性所对应的值也在 Heap 中&lt;/li&gt;
+&lt;li&gt;细节
+window 变量和 window 对象是两个东西
+window 变量是一个容量，存放 window 对象的地址
+window 对象是 Heap 里的一坨数据
+&lt;code&gt;var x = window&lt;/code&gt;
+便可以用 x 代替 window，像 JQuery 中\$
+同样 console 和 console 对象也不是同一个东西，一个是内存地址，一个是数据&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;原型链&#34;&gt;原型链&lt;/h4&gt;
+
+&lt;p&gt;JS 的三座大山（this、原型、AJAX）之一&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;梳理一下&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;prototype 是什么东西&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;console.dir(window).Object.prototype&lt;/code&gt; 打印出来看起来像是一些无用的函数&lt;/li&gt;
+&lt;li&gt;思考一下为什么声明一个对象变量，为何就可以直接调用对象中的属性（例如 toString（））&lt;/li&gt;
+&lt;li&gt;xxx.prototype 存储了 xxx 对象的共有属性，这就叫原型&lt;/li&gt;
+&lt;li&gt;原型让你无需重复声明共有属性，省代码生内存&lt;/li&gt;
+&lt;li&gt;每个对象都有一个隐藏属性，指向原型&lt;/li&gt;
+&lt;li&gt;但是声明的变量的隐藏属性是 _ &lt;em&gt;proto&lt;/em&gt; _&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;以上的说明仍旧没有回答 prototype 是什么东西&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;贴一段我老师的话
+你的 JS 代码还没运行的时候，JS 环境里已经有一个 window 对象了 window 对象有一个 Object 属性，window.Object 是一个函数对象 window.Object 这个函数对象有一个重要属性是 prototype，干什么用的等会说
+window.Object.prototype 里面有这么几个属性 toString（函数）、valueOf（函数）&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;文章
+&lt;a href=&#34;http://www.ruanyifeng.com/blog/2013/04/processes_and_threads.html&#34;&gt;进程与线程的一个简单解释&lt;/a&gt;
+&lt;a href=&#34;https://www.html5rocks.com/zh/tutorials/internals/howbrowserswork/#1_1&#34;&gt;浏览器的工作原理&lt;/a&gt;
+&lt;a href=&#34;https://www.zhihu.com/question/56770432/answer/315342130&#34;&gt;JS 中*proto*和 prototype 存在的意义&lt;/a&gt;
+&lt;a href=&#34;https://blog.sessionstack.com/how-javascript-works-inside-the-v8-engine-5-tips-on-how-to-write-optimized-code-ac089e62b12e&#34;&gt;How JavaScript works:inside the V8 engine&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Apr 2020 16:16:55 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 16:49:39 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>内存图与JS世界</title>
+      <link>http://localhost:1313/post/%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</link>
+      <pubDate>Tue, 28 Apr 2020 16:49:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%86%85%E5%AD%98%E5%9B%BE%E4%B8%8Ejs%E4%B8%96%E7%95%8C/</guid>
+      <description>操作系统常识 打开浏览器 双击 Chrome 图标，就会运行 chrome.exe 文件 开启 Chrome 进程，作为主进程 主进程会开启一些辅助进程 每新建一个网页，就有可能会开启一个子进程 浏览器</description>
+    </item>
     
     <item>
       <title>JavaScript的前世今生</title>
