@@ -71,7 +71,7 @@
 
 <meta itemprop="datePublished" content="2020-04-30T17:40:31&#43;08:00" />
 <meta itemprop="dateModified" content="2020-04-30T17:40:31&#43;08:00" />
-<meta itemprop="wordCount" content="899">
+<meta itemprop="wordCount" content="950">
 
 
 
@@ -369,9 +369,6 @@
 <li><a href="#es6">ES6</a>
 <ul>
 <li><a href="#条件语句">条件语句</a></li>
-</ul></li>
-<li><a href="#在语句只有一句的时候可以省略-不建议">{}在语句只有一句的时候可以省略，不建议</a>
-<ul>
 <li><a href="#while-for-循环语句">while、 for 循环语句</a></li>
 </ul></li>
 </ul></li>
@@ -387,22 +384,26 @@
 <h2 id="es6">ES6</h2>
 
 <ol>
-<li>什么是表达式和语句？
-表达式一般都有值，语句可能有也可能没有<br />
-语句一般会改变环境（声明、赋值）
+<li>什么是表达式和语句？</li>
+</ol>
+
+<p>表达式一般都有值，语句可能有也可能没有<br />
+   语句一般会改变环境（声明、赋值）</p>
 
 <ul>
 <li>表达式
-1+2 表达式的值为 3<br />
-add（1，2）表达式的值为函数的返回值<br />
-console.log(3)的值是 undefined<br />
-console.log 表达式的值为函数本身</li>
+ 1+2 表达式的值为 3<br />
+  add（1，2）表达式的值为函数的返回值<br />
+  console.log(3)的值是 undefined<br />
+  console.log 表达式的值为函数本身</li>
 <li>语句
-var a = 1 是一个语句 （undefined）</li>
+ var a = 1 是一个语句 （undefined）</li>
 <li>大小写敏感</li>
-<li>不影响断句，空格没有实际意义</li>
+<li>如果不影响断句，空格没有实际意义</li>
 <li>return 后面不能加回车</li>
-</ul></li>
+</ul>
+
+<ol>
 <li>标识符规则
 
 <ul>
@@ -429,7 +430,7 @@ var a = 1 是一个语句 （undefined）</li>
 <ul>
 <li>if{表达式}{语句 2}else{语句 2}</li>
 
-<li><h2 id="在语句只有一句的时候可以省略-不建议">{}在语句只有一句的时候可以省略，不建议</h2>
+<li><p><code>{}</code>在语句只有一句的时候可以省略，不建议</p>
 
 <pre><code>a= 1
 if(a===2)
@@ -464,12 +465,7 @@ console.log('a等于2') // a等于2
  }
 
 </code></pre></li>
-</ul>
-
-<p>-</p>
-
-<pre><code>
-</code></pre></li>
+</ul></li>
 
 <li><p>switch 语句</p>
 
@@ -561,7 +557,7 @@ setTimeout(()=&gt;{
 <li><p>提出一个问题 let 和 var 的关系 ？？</p>
 
 <ul>
-<li>老师讲到这个问题 ，let 的单独误解</li>
+<li>老师接下来就就讲到了这个问题 ，let 的单独处理</li>
 </ul></li>
 
 <li><p>break 和 continue 的区别？</p>
@@ -579,7 +575,15 @@ a=5 //5
 </ul></li>
 </ul></li>
 
-<li><p>{
+<li><p>label 语句<br />
+语法<br />
+foo:{<br />
+console.log(1);<br />
+break foo;<br />
+console.log(&lsquo;本行不会输出&rsquo;)<br />
+}<br />
+console.log(2);<br />
+{<br />
 a:1<br />
 }<br />
 上面的东西就是 label 但是 chrome 会认为这是一个对象 但是如果在 a:1 之后加上&rdquo;;&rdquo; chrome 就会返回 1</p></li>

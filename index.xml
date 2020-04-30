@@ -46,22 +46,26 @@
 &lt;h2 id=&#34;es6&#34;&gt;ES6&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;什么是表达式和语句？
-表达式一般都有值，语句可能有也可能没有&lt;br /&gt;
-语句一般会改变环境（声明、赋值）
+&lt;li&gt;什么是表达式和语句？&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;表达式一般都有值，语句可能有也可能没有&lt;br /&gt;
+   语句一般会改变环境（声明、赋值）&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;表达式
-1+2 表达式的值为 3&lt;br /&gt;
-add（1，2）表达式的值为函数的返回值&lt;br /&gt;
-console.log(3)的值是 undefined&lt;br /&gt;
-console.log 表达式的值为函数本身&lt;/li&gt;
+ 1+2 表达式的值为 3&lt;br /&gt;
+  add（1，2）表达式的值为函数的返回值&lt;br /&gt;
+  console.log(3)的值是 undefined&lt;br /&gt;
+  console.log 表达式的值为函数本身&lt;/li&gt;
 &lt;li&gt;语句
-var a = 1 是一个语句 （undefined）&lt;/li&gt;
+ var a = 1 是一个语句 （undefined）&lt;/li&gt;
 &lt;li&gt;大小写敏感&lt;/li&gt;
-&lt;li&gt;不影响断句，空格没有实际意义&lt;/li&gt;
+&lt;li&gt;如果不影响断句，空格没有实际意义&lt;/li&gt;
 &lt;li&gt;return 后面不能加回车&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
 &lt;li&gt;标识符规则
 
 &lt;ul&gt;
@@ -88,7 +92,7 @@ var a = 1 是一个语句 （undefined）&lt;/li&gt;
 &lt;ul&gt;
 &lt;li&gt;if{表达式}{语句 2}else{语句 2}&lt;/li&gt;
 
-&lt;li&gt;&lt;h2 id=&#34;在语句只有一句的时候可以省略-不建议&#34;&gt;{}在语句只有一句的时候可以省略，不建议&lt;/h2&gt;
+&lt;li&gt;&lt;p&gt;&lt;code&gt;{}&lt;/code&gt;在语句只有一句的时候可以省略，不建议&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;a= 1
 if(a===2)
@@ -123,12 +127,7 @@ console.log(&#39;a等于2&#39;) // a等于2
  }
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;-&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;switch 语句&lt;/p&gt;
 
@@ -220,7 +219,7 @@ setTimeout(()=&amp;gt;{
 &lt;li&gt;&lt;p&gt;提出一个问题 let 和 var 的关系 ？？&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;老师讲到这个问题 ，let 的单独误解&lt;/li&gt;
+&lt;li&gt;老师接下来就就讲到了这个问题 ，let 的单独处理&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;break 和 continue 的区别？&lt;/p&gt;
@@ -238,7 +237,15 @@ a=5 //5
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;{
+&lt;li&gt;&lt;p&gt;label 语句&lt;br /&gt;
+语法&lt;br /&gt;
+foo:{&lt;br /&gt;
+console.log(1);&lt;br /&gt;
+break foo;&lt;br /&gt;
+console.log(&amp;lsquo;本行不会输出&amp;rsquo;)&lt;br /&gt;
+}&lt;br /&gt;
+console.log(2);&lt;br /&gt;
+{&lt;br /&gt;
 a:1&lt;br /&gt;
 }&lt;br /&gt;
 上面的东西就是 label 但是 chrome 会认为这是一个对象 但是如果在 a:1 之后加上&amp;rdquo;;&amp;rdquo; chrome 就会返回 1&lt;/p&gt;&lt;/li&gt;
