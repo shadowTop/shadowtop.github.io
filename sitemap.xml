@@ -9,21 +9,28 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/canvas%E5%AE%9E%E8%B7%B5-%E7%94%BB%E5%9B%BE%E6%9D%BF/</loc>
-    <lastmod>2020-04-29T17:24:54+08:00</lastmod>
+    <loc>http://localhost:1313/post/js%E8%AF%AD%E6%B3%95/</loc>
+    <lastmod>2020-04-30T17:40:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2020-04-29T17:24:54+08:00</lastmod>
+    <lastmod>2020-04-30T17:40:31+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
+    <lastmod>2020-04-30T17:40:31+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/post/canvas%E5%AE%9E%E8%B7%B5-%E7%94%BB%E5%9B%BE%E6%9D%BF/</loc>
     <lastmod>2020-04-29T17:24:54+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

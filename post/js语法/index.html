@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>影子的博客</title>
+  <title>JS语法 - 影子的博客</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,8 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="xianmin" />
-  <meta name="description" content="Hugo theme jane example site." />
+  <meta name="description" content="ES6 什么是表达式和语句？ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境（声明、赋值） 表达式 1&#43;2 表达式的值为 3 add（1，2）表达式的值" />
+
   <meta name="keywords" content="Hugo, theme, jane" />
 
 
@@ -34,8 +35,8 @@
 <meta name="generator" content="Hugo 0.57.2" />
 
 
-<link rel="canonical" href="http://localhost:1313/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="影子的博客" />
+<link rel="canonical" href="http://localhost:1313/post/js%E8%AF%AD%E6%B3%95/" />
+
 
 
 
@@ -58,18 +59,26 @@
 
 
 
-<meta property="og:title" content="影子的博客" />
-<meta property="og:description" content="Hugo theme jane example site." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://localhost:1313/" />
+<meta property="og:title" content="JS语法" />
+<meta property="og:description" content="ES6 什么是表达式和语句？ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境（声明、赋值） 表达式 1&#43;2 表达式的值为 3 add（1，2）表达式的值" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/js%E8%AF%AD%E6%B3%95/" />
+<meta property="article:published_time" content="2020-04-30T17:40:31+08:00" />
+<meta property="article:modified_time" content="2020-04-30T17:40:31+08:00" />
+<meta itemprop="name" content="JS语法">
+<meta itemprop="description" content="ES6 什么是表达式和语句？ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境（声明、赋值） 表达式 1&#43;2 表达式的值为 3 add（1，2）表达式的值">
 
-<meta property="og:updated_time" content="2020-04-30T17:40:31+08:00" />
-<meta itemprop="name" content="影子的博客">
-<meta itemprop="description" content="Hugo theme jane example site.">
 
+<meta itemprop="datePublished" content="2020-04-30T17:40:31&#43;08:00" />
+<meta itemprop="dateModified" content="2020-04-30T17:40:31&#43;08:00" />
+<meta itemprop="wordCount" content="899">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="影子的博客"/>
-<meta name="twitter:description" content="Hugo theme jane example site."/>
+<meta name="twitter:title" content="JS语法"/>
+<meta name="twitter:description" content="ES6 什么是表达式和语句？ 表达式一般都有值，语句可能有也可能没有 语句一般会改变环境（声明、赋值） 表达式 1&#43;2 表达式的值为 3 add（1，2）表达式的值"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -236,7 +245,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -328,161 +337,325 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
-          
-<section id="posts" class="posts">
-  
-  
+          <article class="post bg-white">
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+    <header class="post-header">
+      <h1 class="post-title">JS语法</h1>
       
-      <a class="post-link" href="/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/">HTML常用标签</a>
-    </h1>
+      <div class="post-meta">
+        <time datetime="2020-04-30" class="post-time">
+          2020-04-30
+        </time>
+        
+        
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
     
-    <div class="post-meta">
-      <time datetime="2020-04-13" class="post-time">
-        2020-04-13
-      </time>
-      
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
     
-    <div class="post-summary">
-      a标签 可以创建通向其他网页、文件、同一页面内的位置、电子邮件地址或任何其他 URL 的超链接。 跳转到外部页面，跳转到内部锚点，跳转到邮箱或者电话 a标
-    </div>
-    <div class="read-more">
-      <a href="/post/html%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE/" class="read-more-link">阅读全文</a>
-    </div>
-    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#es6">ES6</a>
+<ul>
+<li><a href="#条件语句">条件语句</a></li>
+</ul></li>
+<li><a href="#在语句只有一句的时候可以省略-不建议">{}在语句只有一句的时候可以省略，不建议</a>
+<ul>
+<li><a href="#while-for-循环语句">while、 for 循环语句</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
   </div>
-</article>
+</div>
 
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/html/">HTML 入门笔记</a>
-    </h1>
     
-    <div class="post-meta">
-      <time datetime="2020-04-10" class="post-time">
-        2020-04-10
-      </time>
+    <div class="post-content">
       
-      
-      
-      
+
+<h2 id="es6">ES6</h2>
+
+<ol>
+<li>什么是表达式和语句？
+表达式一般都有值，语句可能有也可能没有<br />
+语句一般会改变环境（声明、赋值）
+
+<ul>
+<li>表达式
+1+2 表达式的值为 3<br />
+add（1，2）表达式的值为函数的返回值<br />
+console.log(3)的值是 undefined<br />
+console.log 表达式的值为函数本身</li>
+<li>语句
+var a = 1 是一个语句 （undefined）</li>
+<li>大小写敏感</li>
+<li>不影响断句，空格没有实际意义</li>
+<li>return 后面不能加回车</li>
+</ul></li>
+<li>标识符规则
+
+<ul>
+<li>第一个字符，可以是 Unicode 字母或\$或_或中文</li>
+<li>后面的字符可以上上面的， 还可以有数字 数字不能放在第一位</li>
+</ul></li>
+<li>注释
+
+<ul>
+<li>好的注释 踩坑注解 | 为什么代码会写的这么奇怪，遇到什么 bug</li>
+</ul></li>
+<li>区块 block
+
+<ul>
+<li>把代码块包在一起</li>
+</ul></li>
+</ol>
+
+<h3 id="条件语句">条件语句</h3>
+
+<ol>
+<li><p>if else 语句</p>
+
+<ul>
+<li>if{表达式}{语句 2}else{语句 2}</li>
+
+<li><h2 id="在语句只有一句的时候可以省略-不建议">{}在语句只有一句的时候可以省略，不建议</h2>
+
+<pre><code>a= 1
+if(a===2)
+console.log('a')
+console.log('a等于2') // a等于2
+</code></pre></li>
+
+<li><p>最推荐使用的写法</p>
+
+<pre><code>
+    if(表达式){
+        语句
+    }else if(表达式){
+        语句
+    }else{
+        语句
+    }
+
+</code></pre></li>
+
+<li><p>次推荐写法</p>
+
+<pre><code>
+ function fn (){
+     if(表达式){
+         return 表达式
+     }
+     if(表达式){
+         return 表达式
+     }
+     return 表达式
+ }
+
+</code></pre></li>
+</ul>
+
+<p>-</p>
+
+<pre><code>
+</code></pre></li>
+
+<li><p>switch 语句</p>
+
+<ul>
+<li>大部分时候不能省略 break</li>
+
+<li><p>少部分时候，可以利用 break</p>
+
+<pre><code>swith(fruit){
+    case &quot;banana&quot;:
+    // ...
+    break;
+    case &quot;apple&quot;:
+    // ...
+    break;
+    default:
+    // ...
+}
+</code></pre></li>
+</ul></li>
+
+<li><p>问好冒号表达式</p>
+
+<ul>
+<li>表达式 1? 表达式 2：表达式 3</li>
+<li>用来替代简短的 if else</li>
+</ul></li>
+
+<li><p>&amp;&amp; 短路逻辑</p>
+
+<ul>
+<li>常用方法：f1 &amp;&amp; f1()</li>
+</ul></li>
+
+<li><p>||短路逻辑</p>
+
+<ul>
+<li>常用方法：A= A||B</li>
+</ul></li>
+</ol>
+
+<h3 id="while-for-循环语句">while、 for 循环语句</h3>
+
+<ol>
+<li>while 语法
+
+<ul>
+<li>while(表达式){语句}</li>
+</ul></li>
+
+<li><p>浮点数不精确考点,下面的函数会是一个死循环 永远不能等于 1<br />
+while 中</p>
+
+<pre><code>var a= 0.1 //初始化
+while(a!== 1){ //判断
+   a =a+0.1; //
+}
+</code></pre></li>
+
+<li><p>for 循环</p>
+
+<ul>
+<li>语法 for (语句 1;表达式 2;语句 3){<br />
+循环体<br />
+}</li>
+<li>先执行语句 1 然后判断表达式 2 如果为真，执行循环体，然后执行语句 3</li>
+<li>如果为假，直接退出循环，执行后面的语句</li>
+
+<li><p>刚才老师举了一个例子</p>
+
+<pre><code>for(let i=0 ;i&lt;5; i++){
+//过一段时间执行
+setTimeout(()=&gt;{
+   console.log(i)
+},0)
+}
+</code></pre></li>
+
+<li><p>刚刚运行了上面的代码，发现打印出来的还是 0 1 2 3 4</p></li>
+
+<li><p>但是如果将 let 换成 var 会发现 打印了 5 个 5</p></li>
+
+<li><p>过一段时间，也就是在 for 循环之后执行</p></li>
+
+<li><p>将每次循环到循环语句 滞后输出</p></li>
+
+<li><p>而这样带来的结果就是 输出 i 的时候这个 i 已经变成 5 了</p></li>
+
+<li><p>提出一个问题 let 和 var 的关系 ？？</p>
+
+<ul>
+<li>老师讲到这个问题 ，let 的单独误解</li>
+</ul></li>
+
+<li><p>break 和 continue 的区别？</p>
+
+<ul>
+<li><p>break 会推出所有循环 (退出最近的循环)V.S 退出当前一次循环</p>
+
+<pre><code>var a = 1;
+function fn(){
+console.log(a)
+}
+setTimeout(fn)
+a=5 //5
+</code></pre></li>
+</ul></li>
+</ul></li>
+
+<li><p>{
+a:1<br />
+}<br />
+上面的东西就是 label 但是 chrome 会认为这是一个对象 但是如果在 a:1 之后加上&rdquo;;&rdquo; chrome 就会返回 1</p></li>
+</ol>
+
     </div>
-  </header>
-  
-  <div class="post-content">
+
     
-    <div class="post-summary">
-      HTML 的历史及简介 HTML 是超文本标记语言，用于描述、定义网站内容。 HTML 在 1990 左右诞生，发明人是 Tim Berners-Lee(李爵士) 如何书写 HTML - 起手式 在使用
-    </div>
-    <div class="read-more">
-      <a href="/post/html/" class="read-more-link">阅读全文</a>
-    </div>
     
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">xianmin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+      2020-04-30
       
-      <a class="post-link" href="/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">如何使用Hugo搭建个人博客</a>
-    </h1>
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
     
-    <div class="post-meta">
-      <time datetime="2020-04-10" class="post-time">
-        2020-04-10
-      </time>
-      
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
     
-    <div class="post-summary">
-      安装 hugo.exe 下载 在huge releases 页面 下载例如 hugo_0.68.3_Windows-64bit.zip 的压缩包，具体版本以自己的系统下载 安装配置 将下载好的压缩包解压，将 hugo.exe 放到 E:\Software\hugo 目录下，注意目录不要有空格和中
-    </div>
-    <div class="read-more">
-      <a href="/post/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="read-more-link">阅读全文</a>
-    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/canvas%E5%AE%9E%E8%B7%B5-%E7%94%BB%E5%9B%BE%E6%9D%BF/">
+            <span class="next-text nav-default">Canvas实践 画图板</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
+  
+  
+
+  
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
     
-  </div>
-</article>
 
   
-</section>
-
-
-
-
-
-
-  
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-    </ul>
-  </nav>
-
-  
-  
-
-
-
-
 
         </div>
       </div>

@@ -6,7 +6,7 @@
     <description>Recent content on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 29 Apr 2020 17:24:54 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 30 Apr 2020 17:40:31 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,219 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>JS语法</title>
+      <link>http://localhost:1313/post/js%E8%AF%AD%E6%B3%95/</link>
+      <pubDate>Thu, 30 Apr 2020 17:40:31 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E8%AF%AD%E6%B3%95/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;es6&#34;&gt;ES6&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;什么是表达式和语句？
+表达式一般都有值，语句可能有也可能没有&lt;br /&gt;
+语句一般会改变环境（声明、赋值）
+
+&lt;ul&gt;
+&lt;li&gt;表达式
+1+2 表达式的值为 3&lt;br /&gt;
+add（1，2）表达式的值为函数的返回值&lt;br /&gt;
+console.log(3)的值是 undefined&lt;br /&gt;
+console.log 表达式的值为函数本身&lt;/li&gt;
+&lt;li&gt;语句
+var a = 1 是一个语句 （undefined）&lt;/li&gt;
+&lt;li&gt;大小写敏感&lt;/li&gt;
+&lt;li&gt;不影响断句，空格没有实际意义&lt;/li&gt;
+&lt;li&gt;return 后面不能加回车&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;标识符规则
+
+&lt;ul&gt;
+&lt;li&gt;第一个字符，可以是 Unicode 字母或\$或_或中文&lt;/li&gt;
+&lt;li&gt;后面的字符可以上上面的， 还可以有数字 数字不能放在第一位&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;注释
+
+&lt;ul&gt;
+&lt;li&gt;好的注释 踩坑注解 | 为什么代码会写的这么奇怪，遇到什么 bug&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;区块 block
+
+&lt;ul&gt;
+&lt;li&gt;把代码块包在一起&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;条件语句&#34;&gt;条件语句&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;if else 语句&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;if{表达式}{语句 2}else{语句 2}&lt;/li&gt;
+
+&lt;li&gt;&lt;h2 id=&#34;在语句只有一句的时候可以省略-不建议&#34;&gt;{}在语句只有一句的时候可以省略，不建议&lt;/h2&gt;
+
+&lt;pre&gt;&lt;code&gt;a= 1
+if(a===2)
+console.log(&#39;a&#39;)
+console.log(&#39;a等于2&#39;) // a等于2
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;最推荐使用的写法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+    if(表达式){
+        语句
+    }else if(表达式){
+        语句
+    }else{
+        语句
+    }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;次推荐写法&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+ function fn (){
+     if(表达式){
+         return 表达式
+     }
+     if(表达式){
+         return 表达式
+     }
+     return 表达式
+ }
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;switch 语句&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;大部分时候不能省略 break&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;少部分时候，可以利用 break&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;swith(fruit){
+    case &amp;quot;banana&amp;quot;:
+    // ...
+    break;
+    case &amp;quot;apple&amp;quot;:
+    // ...
+    break;
+    default:
+    // ...
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;问好冒号表达式&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;表达式 1? 表达式 2：表达式 3&lt;/li&gt;
+&lt;li&gt;用来替代简短的 if else&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&amp;amp;&amp;amp; 短路逻辑&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;常用方法：f1 &amp;amp;&amp;amp; f1()&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;||短路逻辑&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;常用方法：A= A||B&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;while-for-循环语句&#34;&gt;while、 for 循环语句&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;while 语法
+
+&lt;ul&gt;
+&lt;li&gt;while(表达式){语句}&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;浮点数不精确考点,下面的函数会是一个死循环 永远不能等于 1&lt;br /&gt;
+while 中&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var a= 0.1 //初始化
+while(a!== 1){ //判断
+   a =a+0.1; //
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;for 循环&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;语法 for (语句 1;表达式 2;语句 3){&lt;br /&gt;
+循环体&lt;br /&gt;
+}&lt;/li&gt;
+&lt;li&gt;先执行语句 1 然后判断表达式 2 如果为真，执行循环体，然后执行语句 3&lt;/li&gt;
+&lt;li&gt;如果为假，直接退出循环，执行后面的语句&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;刚才老师举了一个例子&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;for(let i=0 ;i&amp;lt;5; i++){
+//过一段时间执行
+setTimeout(()=&amp;gt;{
+   console.log(i)
+},0)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;刚刚运行了上面的代码，发现打印出来的还是 0 1 2 3 4&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;但是如果将 let 换成 var 会发现 打印了 5 个 5&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;过一段时间，也就是在 for 循环之后执行&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;将每次循环到循环语句 滞后输出&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;而这样带来的结果就是 输出 i 的时候这个 i 已经变成 5 了&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;提出一个问题 let 和 var 的关系 ？？&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;老师讲到这个问题 ，let 的单独误解&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;break 和 continue 的区别？&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;break 会推出所有循环 (退出最近的循环)V.S 退出当前一次循环&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var a = 1;
+function fn(){
+console.log(a)
+}
+setTimeout(fn)
+a=5 //5
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;{
+a:1&lt;br /&gt;
+}&lt;br /&gt;
+上面的东西就是 label 但是 chrome 会认为这是一个对象 但是如果在 a:1 之后加上&amp;rdquo;;&amp;rdquo; chrome 就会返回 1&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
       
     </item>
