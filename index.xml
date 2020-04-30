@@ -6,7 +6,7 @@
     <description>Recent content on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 28 Apr 2020 16:49:39 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Apr 2020 17:24:54 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,160 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>Canvas实践 画图板</title>
+      <link>http://localhost:1313/post/canvas%E5%AE%9E%E8%B7%B5-%E7%94%BB%E5%9B%BE%E6%9D%BF/</link>
+      <pubDate>Wed, 29 Apr 2020 17:24:54 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/canvas%E5%AE%9E%E8%B7%B5-%E7%94%BB%E5%9B%BE%E6%9D%BF/</guid>
+      
+        <description>&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;上午解决的问题
+项目初始话，一开始使用 dom 操作&lt;br /&gt;
+实现的功能就是鼠标滑过，在当前像素位置生成一个‘点’&lt;br /&gt;
+也就是添加&lt;code&gt;div&lt;/code&gt;&lt;br /&gt;
+主要使用到的方法就是&lt;code&gt;canvas.onmousemove = (e) =&amp;gt; {}&lt;/code&gt;&lt;br /&gt;
+然后就是用 &lt;code&gt;let div&lt;/code&gt;&lt;br /&gt;
+为这个 div 添加属性&lt;br /&gt;
+使其出现在鼠标的位置&lt;br /&gt;
+就像画点一样&lt;br /&gt;
+还有一个重要的操作就是将这个生产的‘点’&lt;br /&gt;
+使用&lt;code&gt;canvas.appendChild(div)&lt;/code&gt;将其添加到给定的 canvas 中&lt;br /&gt;
+还有 一个重要的东西&lt;br /&gt;
+应该算是采坑&lt;br /&gt;
+那就是让你的 canvas 的大小和你当前的可操作性区域一样大。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; canvas.width = document.documentElement.clientWidth;
+ canvas.height = document.documentElement.clientHeight;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;使用 canvas 来实现之前的功能（更少的性能，更加丝滑）&lt;br /&gt;
+这期间需要查询 mdn 文档&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ```
+    var canvas = document.getElementById(&amp;quot;canvas&amp;quot;);
+    var ctx = canvas.getContext(&amp;quot;2d&amp;quot;);
+    ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这样就可以开心的使用 canvas 来画图了&lt;br /&gt;
+同样还是使用&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;```
+    canvas.onmousemove = (e) =&amp;gt; {
+            ctx.fillStyle = &amp;quot;red&amp;quot;;
+            ctx.fillRect(e.clientX, e.clientY, 10, 10);
+    }
+```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;以上代码的意思大致就是，画一个红色的 10px 像素的点，在我鼠标移动过的地方。
+这样和之前的功能就差不多了
+现在解决一个问题
+那就是 我鼠标一进去就开始绘制
+那么我希望可以只在为鼠标按下的时候才绘制
+那么这就用到了两个条件 鼠标按下且移动
+那就在上面函数的基础上也就是鼠标移动的基础上
+判断鼠标是否按下
+先去 let 一个变量 当鼠标按下将其值设定为 ture
+鼠标释放将其值设置为 false
+。。。
+解释一下上面的参数 e
+当我在调取浏览器时间 onmousemove 时间 2 时，e 是事件相关信息
+而我使用相关信息中的 e.clientX&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;完善这个 canvas（解决断点问题）
+这一部分花了很多时间&lt;br /&gt;
+大概两个多小时 还是在有人采坑的基础上&lt;br /&gt;
+目前我还是不能具有将代码独立完成的能力&lt;br /&gt;
+先解决断点问题&lt;br /&gt;
+移动过快可能会断开&lt;br /&gt;
+那么我们需要让 js 把这种中间填补上来&lt;br /&gt;
+就需要使用 canvas 中的划线工具&lt;br /&gt;
+具体代码如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ```
+    function draw() {
+    var canvas = document.getElementById(&#39;canvas&#39;);
+    if (canvas.getContext) {
+        var ctx = canvas.getContext(&#39;2d&#39;);
+
+        ctx.beginPath();
+        ctx.moveTo(75, 50);
+        ctx.lineTo(100, 75);
+        ctx.lineTo(100, 25);
+        ctx.fill();
+    }
+    }
+
+    ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;那么我们如何去使用它呢&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    ```
+    function drawLine(x1, y1, x2, y2) {
+        ctx.beginPath();
+        //之前这个属性写在外面没有效果
+        //我猜可能是要写在beginPath之后
+        ctx.lineWidth = 5;
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.lineCap = &amp;quot;round&amp;quot;;
+        //这一句非常有必要，让你在线的拐角处更加圆润   也是一个坑
+        ctx.stroke();
+    }
+    ```
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;这里面其实还有很多坑去踩&lt;br /&gt;
+但是我现在比较懒&lt;br /&gt;
+想直接去使用&lt;br /&gt;
+&lt;code&gt;ctx.lineWidth = 5;&lt;/code&gt; 这一句规定线宽度&lt;br /&gt;
+之前我写在函数外不生效&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;画线工具已经准备好了&lt;br /&gt;
+现在要处理的就是解决上一个点和下一个点实时更新问题&lt;br /&gt;
+这里需要借助浏览器事件解决&lt;br /&gt;
+当 onmousedown 的时候 将这个点提取出来&lt;br /&gt;
+&lt;code&gt;last = [e.clientX, e.clientY];&lt;/code&gt;
+保存在变量中&lt;br /&gt;
+接下来就是在 onmousemove 事件中调用之前准备好的画线工具&lt;br /&gt;
+&lt;code&gt;drawLine(last[0], last[1], e.clientX, e.clientY);&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;last = [e.clientX, e.clientY];&lt;/code&gt;
+这样大致就完成了一个比较好的 pc 端的效果&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;接下来就是解决手机端的问题&lt;br /&gt;
+ 感觉很简单啊 只需要炒之前的代码&lt;br /&gt;
+ 但是抄完以后发现有 bug&lt;br /&gt;
+ 那是因为 手机里面没有 onmousedown 事件&lt;br /&gt;
+ 那现在就需要选择手机里面对应的事件&lt;br /&gt;
+ ontouchstart
+&lt;code&gt;canvas.ontouchstart = (e) =&amp;gt; { let x = e.touches[0].clientX; let y = e.touches[0].clientY; last = [x, y]; };&lt;/code&gt;
+&lt;code&gt;canvas.ontouchmove = (e) =&amp;gt; { //在手机上支持多点触控，这时候触摸可能就是一个属性，所以我们需要获取第一个的值 let x = e.touches[0].clientX; let y = e.touches[0].clientY; drawLine(last[0], last[1], x, y); last = [x, y]; };&lt;/code&gt;
+以上就完成了这个功能&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;对了这个应该放到最前面&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;ul&gt;
+&lt;li&gt;本地预览
+需要先全局安装 HTTP-server&lt;br /&gt;
+安装操作
+&lt;code&gt;yarn -g http-serve&lt;/code&gt;&lt;br /&gt;
+启动操作&lt;br /&gt;
+&lt;code&gt;hs . -c-1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;部署到 GitHub Pages&lt;br /&gt;
+新建 git 仓库
+将代码提交到仓库&lt;br /&gt;
+在仓库 settings 选项中找到 GitHub Pages 选项&lt;br /&gt;
+选择分支 就会生成站点 再加上自己的路径 就可以时刻访问了&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
