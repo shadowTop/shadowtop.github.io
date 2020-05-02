@@ -44,34 +44,34 @@
         <description>
 
 &lt;ol&gt;
-&lt;li&gt;声明对象的两种语法？
-&lt;code&gt;let obj={&#39;name&#39;:&#39;ning&#39;,&#39;age&#39;:17}&lt;/code&gt;
-&lt;code&gt;let obj= new Object({&#39;name&#39;:&#39;ning&#39;})&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;声明对象的两种语法？ &lt;/br&gt;
+&lt;code&gt;let obj={&#39;name&#39;:&#39;ning&#39;,&#39;age&#39;:17}&lt;/code&gt; &lt;/br&gt;
+&lt;code&gt;let obj= new Object({&#39;name&#39;:&#39;ning&#39;})&lt;/code&gt; &lt;/br&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;如何删除对象的属性？
-&lt;code&gt;delete obj.name//删除该属性&lt;/code&gt;
-&lt;code&gt;delete obj[&#39;name&#39;] //删除该属性&lt;/code&gt;
-&lt;code&gt;obj.name = undefined&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如何删除对象的属性？ &lt;/br&gt;
+&lt;code&gt;delete obj.name//删除该属性&lt;/code&gt; &lt;/br&gt;
+&lt;code&gt;delete obj[&#39;name&#39;] //删除该属性&lt;/code&gt; &lt;/br&gt;
+&lt;code&gt;obj.name = undefined&lt;/code&gt; &lt;/br&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;如何查看对象的属性？
-&lt;code&gt;Object.keys(obj)//查看自身所有属性&lt;/code&gt;&lt;br /&gt;
-&lt;code&gt;Object.value(obj)//查看所有值&lt;/code&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;如何查看对象的属性？ &lt;/br&gt;
+&lt;code&gt;Object.keys(obj)//查看自身所有属性&lt;/code&gt; &lt;/br&gt;
+&lt;code&gt;Object.value(obj)//查看所有值&lt;/code&gt; &lt;/br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;console.dir(obj)//查看自身+共有属性&lt;/code&gt;
-&lt;code&gt;obj.hasOwnProperty(&#39;toString&#39;)//判断一个属性是自身的还是共有的&lt;/code&gt;&lt;br /&gt;
-查看单个属性
-&lt;code&gt;obj[&#39;key&#39;]&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;console.dir(obj)//查看自身+共有属性&lt;/code&gt; &lt;/br&gt;
+&lt;code&gt;obj.hasOwnProperty(&#39;toString&#39;)//判断一个属性是自身的还是共有的&lt;/code&gt; &lt;/br&gt;
+查看单个属性 &lt;/br&gt;
+&lt;code&gt;obj[&#39;key&#39;]&lt;/code&gt; &lt;/br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;obj.key&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;obj.key&lt;/code&gt; &lt;/br&gt;&lt;/p&gt;
 
-&lt;p&gt;错误方法&lt;/p&gt;
+&lt;p&gt;错误方法 &lt;/br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;obj[key]&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;&lt;code&gt;obj[key]&lt;/code&gt; &lt;/br&gt;&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;如何修改或增加对象的属性？&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;如何修改或增加对象的属性？ &lt;/br&gt;&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;直接赋值&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;直接赋值 &lt;/br&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;let obj = {name: &#39;frank&#39;} // name 是字符串
 obj.name = &#39;frank&#39; // name是字符串
@@ -84,16 +84,16 @@ obj.key 等价于obj[&#39;key&#39;]
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;批量赋值
+&lt;li&gt;&lt;p&gt;批量赋值 &lt;/br&gt;
 &lt;code&gt;Object.assign(obj,{age:15,gender:&#39;man&#39;})&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;&amp;lsquo;name&amp;rsquo; in obj 和 obj.hasOwnProperty(&amp;lsquo;name&amp;rsquo;)的区别？
-&amp;lsquo;name&amp;rsquo; in obj 判断对象 obj 中是否有 &amp;lsquo;name&amp;rsquo; 这个属性&lt;br /&gt;
-obj.hasOwnProperty(&amp;lsquo;name&amp;rsquo;)判断&amp;rsquo;name&amp;rsquo;属性是自身的还是共有的&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&amp;lsquo;name&amp;rsquo; in obj 和 obj.hasOwnProperty(&amp;lsquo;name&amp;rsquo;)的区别？ &lt;/br&gt;
+&amp;lsquo;name&amp;rsquo; in obj 判断对象 obj 中是否有 &amp;lsquo;name&amp;rsquo; 这个属性 &lt;/br&gt;
+obj.hasOwnProperty(&amp;lsquo;name&amp;rsquo;)判断&amp;rsquo;name&amp;rsquo;属性是自身的还是共有的 &lt;/br&gt;&lt;/p&gt;
 
-&lt;p&gt;所有的属性名都会自动变成字符串&lt;br /&gt;
-用变量做属性名&lt;/p&gt;
+&lt;p&gt;所有的属性名都会自动变成字符串 &lt;/br&gt;
+用变量做属性名 &lt;/br&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;```
 let p1= &#39;name&#39;
@@ -105,12 +105,12 @@ let obj = {[p1]}:&#39;frank&#39;}// 属性名为&#39;name&#39;
 
 &lt;h3 id=&#34;对象的隐藏属性&#34;&gt;对象的隐藏属性&lt;/h3&gt;
 
-&lt;p&gt;JS 中每个对象都有一个隐藏属性&lt;br /&gt;
-这个隐藏属性存储着其共有属性组成的对象的地址&lt;br /&gt;
-这个共有属性组成的对象叫做原型&lt;br /&gt;
-也就是说隐藏属性存储着原型的地址&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;JS 中每个对象都有一个隐藏属性  &amp;lt;/br&amp;gt;
+这个隐藏属性存储着其共有属性组成的对象的地址 &amp;lt;/br&amp;gt;
+这个共有属性组成的对象叫做原型  &amp;lt;/br&amp;gt;
+也就是说隐藏属性存储着原型的地址 &amp;lt;/br&amp;gt;
 
-&lt;pre&gt;&lt;code&gt;```
+```
     let obj={&#39;name&#39;:&#39;ning&#39;,&#39;age&#39;:17}
     undefined
     &#39;name&#39; in obj
@@ -127,16 +127,16 @@ let obj = {[p1]}:&#39;frank&#39;}// 属性名为&#39;name&#39;
 &lt;h3 id=&#34;原型&#34;&gt;原型&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;每个对象都有原型
-原型里存着对象的共有属性&lt;br /&gt;
-比如 obj 的原型就是一个对象&lt;br /&gt;
-obj.&lt;strong&gt;proto&lt;/strong&gt;存着这个对象的地址&lt;br /&gt;
-这个对象里有 toString、constructor、valueOf 等属性&lt;/li&gt;
-&lt;li&gt;对象的原型也是对象
-对象的原型也有原型&lt;br /&gt;
-obj={}的原型即为所有对象的原型&lt;br /&gt;
-这个原型包含所有对象的共有属性，是对象的根&lt;br /&gt;
-这个原型也有原型，是 null&lt;/li&gt;
+&lt;li&gt;每个对象都有原型 &lt;/br&gt;
+原型里存着对象的共有属性 &lt;/br&gt;
+比如 obj 的原型就是一个对象 &lt;/br&gt;
+obj.&lt;strong&gt;proto&lt;/strong&gt;存着这个对象的地址 &lt;/br&gt;&lt;br /&gt;
+这个对象里有 toString、constructor、valueOf 等属性 &lt;/br&gt;&lt;/li&gt;
+&lt;li&gt;对象的原型也是对象 &lt;/br&gt;
+对象的原型也有原型 &lt;/br&gt;
+obj={}的原型即为所有对象的原型 &lt;/br&gt;&lt;br /&gt;
+这个原型包含所有对象的共有属性，是对象的根 &lt;/br&gt;
+这个原型也有原型，是 null &lt;/br&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       

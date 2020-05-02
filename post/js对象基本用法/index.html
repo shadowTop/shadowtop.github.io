@@ -71,7 +71,7 @@
 
 <meta itemprop="datePublished" content="2020-05-02T17:28:52&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-02T17:28:52&#43;08:00" />
-<meta itemprop="wordCount" content="729">
+<meta itemprop="wordCount" content="733">
 
 
 
@@ -382,34 +382,34 @@
       
 
 <ol>
-<li>声明对象的两种语法？
-<code>let obj={'name':'ning','age':17}</code>
-<code>let obj= new Object({'name':'ning'})</code></li>
+<li>声明对象的两种语法？ </br>
+<code>let obj={'name':'ning','age':17}</code> </br>
+<code>let obj= new Object({'name':'ning'})</code> </br></li>
 
-<li><p>如何删除对象的属性？
-<code>delete obj.name//删除该属性</code>
-<code>delete obj['name'] //删除该属性</code>
-<code>obj.name = undefined</code></p></li>
+<li><p>如何删除对象的属性？ </br>
+<code>delete obj.name//删除该属性</code> </br>
+<code>delete obj['name'] //删除该属性</code> </br>
+<code>obj.name = undefined</code> </br></p></li>
 
-<li><p>如何查看对象的属性？
-<code>Object.keys(obj)//查看自身所有属性</code><br />
-<code>Object.value(obj)//查看所有值</code></p>
+<li><p>如何查看对象的属性？ </br>
+<code>Object.keys(obj)//查看自身所有属性</code> </br>
+<code>Object.value(obj)//查看所有值</code> </br></p>
 
-<p><code>console.dir(obj)//查看自身+共有属性</code>
-<code>obj.hasOwnProperty('toString')//判断一个属性是自身的还是共有的</code><br />
-查看单个属性
-<code>obj['key']</code></p>
+<p><code>console.dir(obj)//查看自身+共有属性</code> </br>
+<code>obj.hasOwnProperty('toString')//判断一个属性是自身的还是共有的</code> </br>
+查看单个属性 </br>
+<code>obj['key']</code> </br></p>
 
-<p><code>obj.key</code></p>
+<p><code>obj.key</code> </br></p>
 
-<p>错误方法</p>
+<p>错误方法 </br></p>
 
-<p><code>obj[key]</code></p></li>
+<p><code>obj[key]</code> </br></p></li>
 
-<li><p>如何修改或增加对象的属性？</p>
+<li><p>如何修改或增加对象的属性？ </br></p>
 
 <ul>
-<li><p>直接赋值</p>
+<li><p>直接赋值 </br></p>
 
 <pre><code>let obj = {name: 'frank'} // name 是字符串
 obj.name = 'frank' // name是字符串
@@ -422,16 +422,16 @@ obj.key 等价于obj['key']
 
 </code></pre></li>
 
-<li><p>批量赋值
+<li><p>批量赋值 </br>
 <code>Object.assign(obj,{age:15,gender:'man'})</code></p></li>
 </ul></li>
 
-<li><p>&lsquo;name&rsquo; in obj 和 obj.hasOwnProperty(&lsquo;name&rsquo;)的区别？
-&lsquo;name&rsquo; in obj 判断对象 obj 中是否有 &lsquo;name&rsquo; 这个属性<br />
-obj.hasOwnProperty(&lsquo;name&rsquo;)判断&rsquo;name&rsquo;属性是自身的还是共有的</p>
+<li><p>&lsquo;name&rsquo; in obj 和 obj.hasOwnProperty(&lsquo;name&rsquo;)的区别？ </br>
+&lsquo;name&rsquo; in obj 判断对象 obj 中是否有 &lsquo;name&rsquo; 这个属性 </br>
+obj.hasOwnProperty(&lsquo;name&rsquo;)判断&rsquo;name&rsquo;属性是自身的还是共有的 </br></p>
 
-<p>所有的属性名都会自动变成字符串<br />
-用变量做属性名</p>
+<p>所有的属性名都会自动变成字符串 </br>
+用变量做属性名 </br></p>
 
 <pre><code>```
 let p1= 'name'
@@ -443,12 +443,12 @@ let obj = {[p1]}:'frank'}// 属性名为'name'
 
 <h3 id="对象的隐藏属性">对象的隐藏属性</h3>
 
-<p>JS 中每个对象都有一个隐藏属性<br />
-这个隐藏属性存储着其共有属性组成的对象的地址<br />
-这个共有属性组成的对象叫做原型<br />
-也就是说隐藏属性存储着原型的地址</p>
+<pre><code>JS 中每个对象都有一个隐藏属性  &lt;/br&gt;
+这个隐藏属性存储着其共有属性组成的对象的地址 &lt;/br&gt;
+这个共有属性组成的对象叫做原型  &lt;/br&gt;
+也就是说隐藏属性存储着原型的地址 &lt;/br&gt;
 
-<pre><code>```
+```
     let obj={'name':'ning','age':17}
     undefined
     'name' in obj
@@ -465,16 +465,16 @@ let obj = {[p1]}:'frank'}// 属性名为'name'
 <h3 id="原型">原型</h3>
 
 <ol>
-<li>每个对象都有原型
-原型里存着对象的共有属性<br />
-比如 obj 的原型就是一个对象<br />
-obj.<strong>proto</strong>存着这个对象的地址<br />
-这个对象里有 toString、constructor、valueOf 等属性</li>
-<li>对象的原型也是对象
-对象的原型也有原型<br />
-obj={}的原型即为所有对象的原型<br />
-这个原型包含所有对象的共有属性，是对象的根<br />
-这个原型也有原型，是 null</li>
+<li>每个对象都有原型 </br>
+原型里存着对象的共有属性 </br>
+比如 obj 的原型就是一个对象 </br>
+obj.<strong>proto</strong>存着这个对象的地址 </br><br />
+这个对象里有 toString、constructor、valueOf 等属性 </br></li>
+<li>对象的原型也是对象 </br>
+对象的原型也有原型 </br>
+obj={}的原型即为所有对象的原型 </br><br />
+这个原型包含所有对象的共有属性，是对象的根 </br>
+这个原型也有原型，是 null </br></li>
 </ol>
 
     </div>
