@@ -6,10 +6,28 @@
     <description>Recent content in Posts on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 May 2020 17:28:52 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 21:47:39 +0800</lastBuildDate>
     
 	<atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JS函数</title>
+      <link>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sun, 03 May 2020 21:47:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</guid>
+      <description>函数的声明方式 函数是一个对象 具名函数 function fn(){ 语句 return 返回值 } 匿名函数 上面的具名函数，去掉函数名就是匿名函数 let a = function(x,y){return x+y} 也叫函数表达式 箭头函数 let f1 = x</description>
+    </item>
+    
+    <item>
+      <title>JS对象分类</title>
+      <link>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Sat, 02 May 2020 21:46:07 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</guid>
+      <description>构造函数 小小的总结一下，这个课其实理解不到位 老师的逻辑是从 几个实例开始 输出各种形状的面积和周长 以我的能力 输出 12 个给定边长的正方形的面积和周长</description>
+    </item>
     
     <item>
       <title>JS对象基本用法</title>

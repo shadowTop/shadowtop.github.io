@@ -6,7 +6,7 @@
     <description>Recent content on 影子的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 02 May 2020 17:28:52 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 May 2020 21:47:39 +0800</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,328 @@
 &lt;/ul&gt;
 
 &lt;p&gt;Learn more and contribute on &lt;a href=&#34;https://github.com/gohugoio&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>JS函数</title>
+      <link>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</link>
+      <pubDate>Sun, 03 May 2020 21:47:39 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%87%BD%E6%95%B0/</guid>
+      
+        <description>
+
+&lt;h3 id=&#34;函数的声明方式&#34;&gt;函数的声明方式&lt;/h3&gt;
+
+&lt;p&gt;函数是一个对象&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;具名函数&lt;br /&gt;
+function fn(){
+语句
+return 返回值
+}&lt;/li&gt;
+&lt;li&gt;匿名函数&lt;br /&gt;
+上面的具名函数，去掉函数名就是匿名函数&lt;br /&gt;
+&lt;code&gt;let a = function(x,y){return x+y}&lt;/code&gt;&lt;br /&gt;
+也叫函数表达式&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;箭头函数&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let f1 = x =&amp;gt;x*x
+let f2 = (x,y) =&amp;gt; x+y
+let f2 = (x,y) =&amp;gt; {return x+y}
+let f2 = (x,y) =&amp;gt; ({name:x,age:y})
+// 直接返回对象会出错，需要加()
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;用构造函数&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;let f = new Function(&#39;x&#39;,&#39;y&#39;,&#39;return x+y&#39;)&lt;/code&gt;&lt;br /&gt;
+   很少人用，但是能让你知道函数是谁构造的&lt;br /&gt;
+   所有的函数都是 Function 构造出来的&lt;br /&gt;
+   包括 Object、Array、Function 也是&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;补充&lt;br /&gt;
+函数自身&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let fn = () =&amp;gt; console.log(&#39;hi&#39;)
+fn //不会有任何结果  没有执行
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;函数调用&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let fn = () =&amp;gt; console.log(&#39;hi&#39;)
+fn() // 打印出hi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;let fn = () =&amp;gt; console.log(&#39;hi&#39;)
+let fn2 = fn
+fn2() //fn保存了匿名函数的地址，这个地址被赋值给fn2，fn2()调用了匿名函数
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;函数的要素&#34;&gt;函数的要素&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;调用时机 （刻舟求剑）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let a= 1
+function fn(){
+    console.log(a)
+}
+fn()  //1
+a= 2
+fn() //2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;let a = 1
+function fn(){
+setTimeout(()=&amp;gt;{
+console.log(a)
+},0)
+}
+fn() //a
+a = 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;let i = 0
+for(i = 0; i&amp;lt;6; i++){
+setTimeout(()=&amp;gt;{
+console.log(i)
+},0)
+} //打印出6个6
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;如果把 let i= 0 写入到 for 循环中
+   setTimeout() //滞后性，忙完当前的事情&lt;/br&gt;
+   for 中的 let i 每次会多创建一个 i&lt;/br&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;作用域&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function(){
+   let a = 1
+}
+console.log(a) //a不存在
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;就算 fn 执行了，a 也不存在&lt;/br&gt;
+全局变量&lt;/br&gt;
+在顶级作用域声明的变量是全局变量&lt;/br&gt;
+window 的属性是全局变量 &lt;/br&gt;
+其他都是局部变量&lt;/br&gt;
+作用域规则：&lt;/br&gt;
+如果多个作用域有同名变量 a&lt;/br&gt;
+那么查找 a 的声明时，就想上取最近的作用域&lt;/br&gt;
+简称就近原则&lt;/br&gt;
+查找 a 的过程与函数执行无关&lt;/br&gt;
+但是 a 的值与函数执行有关&lt;/br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;闭包&lt;/br&gt;
+如果一个函数用到了外部的变量&lt;/br&gt;
+那么这个函数加这个变量就叫做闭包&lt;/br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;形式参数 &lt;/br&gt;
+形式参数的意思就是非实际参数&lt;/br&gt;
+形参可认为是变量声明&lt;/br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;返回值&lt;/br&gt;
+每个函数都有返回值&lt;/br&gt;
+如果没有写 return ，返回值是 undefined&lt;/br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;调用栈 &lt;/br&gt;
+什么是调用栈？&lt;/br&gt;
+在调用一个函数的时候，我们需要去另外一个地方去执行它，执行完了以后再返回回来&lt;/br&gt;
+调用栈是用来记录&lt;/br&gt;
+JS 引擎在调用一个函数前&lt;/br&gt;
+需要把这个函数所在的环境 push 到一个数组里&lt;/br&gt;
+这个数组叫做调用栈&lt;/br&gt;
+等函数执行完了，就会把环境弹出来&lt;/br&gt;
+然后 return 到之前的环境，继续执行后续代码&lt;/br&gt;
+作用？&lt;/br&gt;
+每次执行函数，我都得知道要回到那，所以把回调地址记在栈中，执行完了以后就弹栈，找到地址。&lt;/br&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;递归函数&lt;/br&gt;
+如果使用递归函数很有可能把栈压满&lt;/br&gt;
+阶乘代码：&lt;/br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;function f(n){
+   return n!==1?n*f(n-1):1
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;f(4)压四次栈，弹四次栈&lt;/br&gt;
+   看浏览器的调用栈长&lt;/br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;   function computeMaxCallStackSize() {
+    try {
+    return 1 + computeMaxCallStackSize();
+    } catch (e) {
+    // 报错说明stack overflow
+    return 1;
+    }
+   }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ol&gt;
+&lt;li&gt;函数提升&lt;/br&gt;
+不管你把具名函数声明在哪，他都会跑到第一行&lt;/br&gt;
+let 声明的变量，不允许有同名的函数&lt;/br&gt;
+&lt;code&gt;let fn = function(){}&lt;/code&gt;
+这是赋值，右边的匿名函数声明不会提升&lt;/br&gt;&lt;/li&gt;
+&lt;li&gt;argument(除了箭头函数)和 this&lt;/br&gt;
+伪数组&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>JS对象分类</title>
+      <link>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</link>
+      <pubDate>Sat, 02 May 2020 21:46:07 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/js%E5%AF%B9%E8%B1%A1%E5%88%86%E7%B1%BB/</guid>
+      
+        <description>
+
+&lt;h2 id=&#34;构造函数&#34;&gt;构造函数&lt;/h2&gt;
+
+&lt;p&gt;小小的总结一下，这个课其实理解不到位&lt;/p&gt;
+
+&lt;p&gt;老师的逻辑是从 几个实例开始
+输出各种形状的面积和周长&lt;br /&gt;
+以我的能力 输出 12 个给定边长的正方形的面积和周长&lt;br /&gt;
+我写出的代码可能是&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let squareList = []
+let widthList = [5,6,4,8,3,8,9,8,9,1,3,5]
+for(let i= 0;i&amp;lt;12;i++){
+    squareList[1] = {
+        width:widthList[i],
+        getArea(){
+            return this.width*this.width
+        },
+        getLength(){
+            return this.width *4
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;其实以上代码以我的水平能写出来算是不错的&lt;br /&gt;
+但还是这个代码 ，浪费内存及其严重&lt;br /&gt;
+三个变量（包含两个数组）&lt;br /&gt;
+然而 squareList 中每个属性，都对应一个对象包含数组和函数，这个些对象都占用了内存，而其功能都是一样的&lt;/p&gt;
+
+&lt;p&gt;然后就提到了，借助原型实现&lt;br /&gt;
+将 12 个对象的公用属性放到原型里&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let squareList = []
+let widthList = [5,6,4,8,3,8,9,8,9,1,3,5]
+let squareprototype = {
+     getArea(){
+            return this.width*this.width
+        },
+        getLength(){
+            return this.width *4
+        }
+}
+for(let i= 0;i&amp;lt;12;i++){
+    squareList[i] = Object.create(squarePrototype)
+    squareList[i].width = widthList[i]
+}
+//代码太分散
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;//抽离到函数
+let squareList = []
+let widthList = [5,6,5,6,5,6,5,6,5,6,5,6]
+function createSquare(width){ //此函数叫做构造函数
+let obj = Object.create(squarePrototype)
+// 以squarePrototype 为原型创建空对象
+obj.width = width
+return obj
+}
+let squarePrototype = {
+getArea(){
+return this.width * this.width
+},
+getLength(){
+return this.width * 4
+}
+}
+for(let i = 0; i&amp;lt;12; i++){
+squareList[i] = createSquare(widthList[i])
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;//函数和原型结合
+let squareList = []
+let widthList = [5,6,5,6,5,6,5,6,5,6,5,6]
+function createSquare(width){
+let obj = Object.create(createSquare.squarePrototype)
+obj.width = width
+return obj
+}
+createSquare.squarePrototype = { //把圆形放到函数上
+getArea(){
+return this.width * this.width
+},
+getLength(){
+return this.width * 4
+}
+constructor: createSquare //指定方便通过原型找到构造函数
+}
+for(let i = 0; i&amp;lt;12; i++){
+squareList[i] = createSquare(widthList[i])
+console.log(squareList[i].constructor)
+// constructor可以知道谁构造了这个对象
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;然后就引出了 new&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;let squareList = []
+let widthList = [5,6,5,6,5,6,5,6,5,6,5,6]
+function Square(width){
+    this.width =width
+}
+square.Prototype.getArea =function() { //把圆形放到函数上
+    return this.width * this.width
+}
+square.Prototype.getLength(){
+    return this.width * 4
+}
+
+for(let i = 0; i&amp;lt;12; i++){
+    squareList[i] = new Square(widthList[i])
+    console.log(squareList[i].constructor)
+// constructor可以知道谁构造了这个对象
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;//简化代码
+function Square(width){
+    this.width = width
+}
+Square.prototype.getArea = function(){
+    return this.width * this.width
+}
+Square.prototype.getLength = function(){
+    return this.width * 4
+}
+
+let square = new Square(5)
+&lt;/code&gt;&lt;/pre&gt;
 </description>
       
     </item>
@@ -137,6 +459,8 @@ obj.&lt;strong&gt;proto&lt;/strong&gt;存着这个对象的地址 &lt;/br&gt;&lt
 obj={}的原型即为所有对象的原型 &lt;/br&gt;&lt;br /&gt;
 这个原型包含所有对象的共有属性，是对象的根 &lt;/br&gt;
 这个原型也有原型，是 null &lt;/br&gt;&lt;/li&gt;
+&lt;li&gt;增加原型&lt;/br&gt;
+&lt;code&gt;let obj = Object.create({&#39;name&#39;:&#39;ning&#39;})&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 </description>
       
