@@ -454,14 +454,14 @@ obj.hasOwnProperty(&amp;lsquo;name&amp;rsquo;)判断&amp;rsquo;name&amp;rsquo;�
 &lt;h3 id=&#34;原型&#34;&gt;原型&lt;/h3&gt;
 
 &lt;ol&gt;
-&lt;li&gt;每个对象都有原型 &lt;/br&gt;
-原型里存着对象的共有属性 &lt;/br&gt;
-比如 obj 的原型就是一个对象 &lt;/br&gt;
-obj.&lt;strong&gt;proto&lt;/strong&gt;存着这个对象的地址 &lt;/br&gt;&lt;br /&gt;
-这个对象里有 toString、constructor、valueOf 等属性 &lt;/br&gt;&lt;/li&gt;
+&lt;li&gt;每个对象都有原型&lt;/br&gt;
+原型里存着对象的共有属性&lt;/br&gt;
+比如 obj 的原型就是一个对象&lt;/br&gt;
+obj.__proto__存着这个对象的地址&lt;/br&gt;
+这个对象里有 toString、constructor、valueOf 等属性&lt;/br&gt;&lt;/li&gt;
 &lt;li&gt;对象的原型也是对象 &lt;/br&gt;
 对象的原型也有原型 &lt;/br&gt;
-obj={}的原型即为所有对象的原型 &lt;/br&gt;&lt;br /&gt;
+obj={}的原型即为所有对象的原型&lt;/br&gt;
 这个原型包含所有对象的共有属性，是对象的根 &lt;/br&gt;
 这个原型也有原型，是 null &lt;/br&gt;&lt;/li&gt;
 &lt;li&gt;增加原型&lt;/br&gt;
