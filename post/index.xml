@@ -17,7 +17,7 @@
       <pubDate>Tue, 05 May 2020 16:59:49 +0800</pubDate>
       
       <guid>http://localhost:1313/post/js%E5%87%BD%E6%95%B0%E7%9A%84%E6%89%A7%E8%A1%8C%E6%97%B6%E6%9C%BA/</guid>
-      <description>以下代码打印结果是？为什么？ let i = 0 for(i = 0; i&amp;lt;6; i++){ setTimeout(()=&amp;gt;{ console.log(i) },0) } 答：打印结果是 6 个 6，因为 setTimeout()方法设置一个定时器，该定时器在定时器</description>
+      <description>以下代码打印结果是？为什么？ ``` let i = 0 for(i = 0; i&amp;lt;6; i++){ setTimeout(()=&amp;gt;{ console.log(i) },0) } ``` 答：打印结果是 6 个 6，因为 setTimeout()方法设置一个定时器，该定时器在定</description>
     </item>
     
     <item>
